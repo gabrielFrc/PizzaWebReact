@@ -1,15 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import LadingPage from './screens/lading-page';
 
 const RoutesComp = () => (
-    <BrowserRouter>
+    <HashRouter>
         <Routes>
             {/* <Route path='*' element={<NotFoundSreen/>}></Route> */}
             <Route exact path='/' element={<LadingPage/>}></Route>
             <Route exact path='/home' element={<LadingPage/>}></Route>
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
 )
 
 export default RoutesComp;
