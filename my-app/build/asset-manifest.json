@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Pizza-page/static/css/main.9018bef6.css",
+    "main.js": "/Pizza-page/static/js/main.05abf267.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Pizza-page/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/Pizza-page/index.html",
+    "main.9018bef6.css.map": "/Pizza-page/static/css/main.9018bef6.css.map",
+    "main.05abf267.js.map": "/Pizza-page/static/js/main.05abf267.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Pizza-page/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9018bef6.css",
+    "static/js/main.05abf267.js"
+  ]
+}
