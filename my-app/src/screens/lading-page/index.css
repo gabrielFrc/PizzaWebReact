@@ -1,0 +1,21 @@
+body{
+    background-image: linear-gradient(to top, white 60%, rgb(248, 248, 248));
+}
+
+.blur-all{
+    filter: blur(1.5px);
+}
+
+.images-container{
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    gap: 15px;
+    justify-content: center;
+}
+
+.images-container .aside-image-container{
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}

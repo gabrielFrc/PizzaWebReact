@@ -1,0 +1,61 @@
+:root{
+    --header-height: 60px;
+}
+
+header{
+    height: var(--header-height);
+    background-color: white;
+}
+
+nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > .logo-img{
+    margin: 1px 1px 1px 100px;
+}
+
+nav .create-button{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 100px;
+}
+
+nav .create-button > button {
+    width: 150px;
+    background-color: white;
+    border: 1px ridge rgba(0, 0, 0, 0.1);
+    transition: .35s;
+}
+
+nav .create-button > button:hover {
+    background-color: rgba(212, 212, 212, 0.151);
+}
+
+nav .create-button > button img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+nav .create-button > button div{
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+
+nav .create-button > button p{
+    margin: 0;
+    font-size: 0.95em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+main{
+    height: 100vh;
+}
+
+main div > h1 {
+    text-align: center;
+}

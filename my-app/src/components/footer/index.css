@@ -1,0 +1,17 @@
+.footer-container{
+    background-color: rgb(0, 0, 0, .9);
+    color: white;
+    margin-top: 45px;
+    padding: 25px 0;
+}
+
+.another-links ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 45px;
+}
+.another-links ul a{
+    text-decoration: none;
+    color: white;
+}
