@@ -2,60 +2,81 @@
     "pizza": [
         {
             "id": 0,
-            "title": "Cheese Pizza",
-            "description": "It's a cheese pizza.",
-            "price": "$15.00",
-            "image_url": "https://kitchenatics.com/wp-content/uploads/2020/09/Cheese-pizza-1.jpg"
+            "title": "Margherita",
+            "description": "Tomato sauce, mozzarella cheese, and basil.",
+            "price": "$10.00",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPo8g3lSutkilAb2YvQ2kbTMPFtXib4pgz1A&usqp=CAU"
         },
         {
             "id": 1,
-            "title": "Pepperoni Pizza",
-            "description": "It's a pepperoni pizza.",
-            "price": "$16.50",
+            "title": "Pepperoni",
+            "description": "Tomato sauce, mozzarella cheese, and pepperoni.",
+            "price": "$12.00",
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9t1cSDTAWHA-LOt845-HHTb-mbmdyiqNq6g&usqp=CAU"
         },
         {
             "id": 2,
-            "title": "Pepperoni Pizza",
-            "description": "It's a pepperoni pizza.",
-            "price": "$16.50",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9t1cSDTAWHA-LOt845-HHTb-mbmdyiqNq6g&usqp=CAU"
+            "title": "Hawaiian",
+            "description": "Tomato sauce, mozzarella cheese, ham, and pineapple.",
+            "price": "$15.00",
+            "image_url": "https://media.istockphoto.com/id/1349383878/photo/hawaiian-pizza-with-ham-and-pineapple.jpg?s=612x612&w=0&k=20&c=P7rJNWhe1utWDDXUa4ZyZdnl4C5he8jfWD-dKf_hefI="
         },
         {
             "id": 3,
-            "title": "Pepperoni Pizza",
-            "description": "It's a pepperoni pizza.",
-            "price": "$16.50",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9t1cSDTAWHA-LOt845-HHTb-mbmdyiqNq6g&usqp=CAU"
+            "title": "Meat Lover’s",
+            "description": "Tomato sauce, mozzarella cheese, pepperoni, sausage, bacon, and ham.",
+            "price": "$20.00",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3H0dDF93SYTkIM01Qr9wsYfv8krkDHvgyA19Csn8NIA7G7X4h8QmS5QSd2CsWYhEpVNU&usqp=CAU"
         },
         {
             "id": 4,
-            "title": "Pepperoni Pizza",
-            "description": "It's a pepperoni pizza.",
-            "price": "$16.50",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9t1cSDTAWHA-LOt845-HHTb-mbmdyiqNq6g&usqp=CAU"
+            "title": "Veggie Lover’s",
+            "description": "Tomato sauce, mozzarella cheese, mushrooms, onions, green peppers, and black olives.",
+            "price": "$18.00",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DTdtI07YGoy0m_85wNKT7klv_e8BH4OYeo45X9BL09jkEOpQ_sy-jQvAjBD7Xn91wIs&usqp=CAU"
+        },
+        {
+            "id": 5,
+            "title": "Sicilian Pizza",
+            "description": "Thick crust pizza with tomato sauce and mozzarella cheese. Toppings can include pepperoni or sausage.",
+            "price": "$22.00",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnDX4D6IiIGVohTyrLwSawjcJpKcfWtddds-3kzir3K18e1or3fELgFqN7p_tw5S6XwtM&usqp=CAU"
         }
     ],
     "drink": [
         {
             "id": 0,
-            "title": "Strawberry Juice",
-            "description": "It's a Strawberry Juice.",
-            "price": "$6.00",
-            "image_url": "https://media.istockphoto.com/id/178416773/photo/some-glasses-with-strawberry-liqueur.jpg?s=612x612&w=0&k=20&c=wo7eqLKBOV-FQZ15Lo7A3RMLPAdvwbkVPqlZm_GM9pc="
+            "title": "Soda",
+            "description": "A classic drink that goes well with pizza.",
+            "price": "$2.50",
+            "image_url": "https://cdn.mos.cms.futurecdn.net/48yDps3EbdskuitmhQqSq9.jpg"
         },
         {
             "id": 1,
-            "title": "Strawberry Juice",
-            "description": "It's a Strawberry Juice.",
-            "price": "$6.00",
-            "image_url": "https://media.istockphoto.com/id/178416773/photo/some-glasses-with-strawberry-liqueur.jpg?s=612x612&w=0&k=20&c=wo7eqLKBOV-FQZ15Lo7A3RMLPAdvwbkVPqlZm_GM9pc="
+            "title": "Beer",
+            "description": "A refreshing lager like Peroni Nastro Azzurro is perfect with pizza.",
+            "price": "$5.00",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEAr1H6cFil1Z9YOtUSMhK0n52Xvb73kzew&usqp=CAU"
         },
         {
             "id": 2,
-            "title": "Strawberry Juice",
-            "description": "It's a Strawberry Juice.",
-            "price": "$6.00",
+            "title": "Lemonade",
+            "description": "A refreshing drink that goes well with pizza.",
+            "price": "$3.00",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIlxtFTaRRHfO2jU2BIVKDiYPTU0zP7mdqUwhdZQ30amI8YScf8NCPya6ZFamXh4K8cwk&usqp=CAU"
+        },
+        {
+            "id": 3,
+            "title": "Iced Tea",
+            "description": "A refreshing drink that goes well with pizza.",
+            "price": "$2.50",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd3W8w5jUGTqQzf5X339lQ2ZyzKLByfQXtoJrSvA43Ug_5XCCaRueEirVKmdZGIr2FDsA&usqp=CAU"
+        },
+        {
+            "id": 4,
+            "title": "Fruit Juice",
+            "description": "A healthy option that goes well with pizza.",
+            "price": "$3.50",
             "image_url": "https://media.istockphoto.com/id/178416773/photo/some-glasses-with-strawberry-liqueur.jpg?s=612x612&w=0&k=20&c=wo7eqLKBOV-FQZ15Lo7A3RMLPAdvwbkVPqlZm_GM9pc="
         }
     ]
