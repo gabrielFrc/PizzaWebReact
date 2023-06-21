@@ -1,0 +1,62 @@
+{
+    "pizza": [
+        {
+            "id": 0,
+            "title": "Cheese Pizza",
+            "description": "It's a cheese pizza.",
+            "price": "$15.00",
+            "image_url": "https://kitchenatics.com/wp-content/uploads/2020/09/Cheese-pizza-1.jpg"
+        },
+        {
+            "id": 1,
+            "title": "Pepperoni Pizza",
+            "description": "It's a pepperoni pizza.",
+            "price": "$16.50",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9t1cSDTAWHA-LOt845-HHTb-mbmdyiqNq6g&usqp=CAU"
+        },
+        {
+            "id": 2,
+            "title": "Pepperoni Pizza",
+            "description": "It's a pepperoni pizza.",
+            "price": "$16.50",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9t1cSDTAWHA-LOt845-HHTb-mbmdyiqNq6g&usqp=CAU"
+        },
+        {
+            "id": 3,
+            "title": "Pepperoni Pizza",
+            "description": "It's a pepperoni pizza.",
+            "price": "$16.50",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9t1cSDTAWHA-LOt845-HHTb-mbmdyiqNq6g&usqp=CAU"
+        },
+        {
+            "id": 4,
+            "title": "Pepperoni Pizza",
+            "description": "It's a pepperoni pizza.",
+            "price": "$16.50",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9t1cSDTAWHA-LOt845-HHTb-mbmdyiqNq6g&usqp=CAU"
+        }
+    ],
+    "drink": [
+        {
+            "id": 0,
+            "title": "Strawberry Juice",
+            "description": "It's a Strawberry Juice.",
+            "price": "$6.00",
+            "image_url": "https://media.istockphoto.com/id/178416773/photo/some-glasses-with-strawberry-liqueur.jpg?s=612x612&w=0&k=20&c=wo7eqLKBOV-FQZ15Lo7A3RMLPAdvwbkVPqlZm_GM9pc="
+        },
+        {
+            "id": 1,
+            "title": "Strawberry Juice",
+            "description": "It's a Strawberry Juice.",
+            "price": "$6.00",
+            "image_url": "https://media.istockphoto.com/id/178416773/photo/some-glasses-with-strawberry-liqueur.jpg?s=612x612&w=0&k=20&c=wo7eqLKBOV-FQZ15Lo7A3RMLPAdvwbkVPqlZm_GM9pc="
+        },
+        {
+            "id": 2,
+            "title": "Strawberry Juice",
+            "description": "It's a Strawberry Juice.",
+            "price": "$6.00",
+            "image_url": "https://media.istockphoto.com/id/178416773/photo/some-glasses-with-strawberry-liqueur.jpg?s=612x612&w=0&k=20&c=wo7eqLKBOV-FQZ15Lo7A3RMLPAdvwbkVPqlZm_GM9pc="
+        }
+    ]
+}
