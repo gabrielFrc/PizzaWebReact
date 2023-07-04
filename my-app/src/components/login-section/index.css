@@ -1,0 +1,54 @@
+body{
+    text-align: center;
+}
+
+.container{
+    z-index: 11;
+    position: fixed;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%,-15%);
+    background-color: rgba(255, 255, 255);
+    width: 500px;
+    padding: 15px 15px;
+    border: 1px solid black;
+}
+
+figure{
+    margin: 0;
+    text-align: end;
+}
+
+.close-icon > img{
+    width: 30px;
+}
+
+.input-label{
+    padding: 10px;
+}
+.input-label label{
+    display: block;
+    margin: 5px 0;
+}
+.input-label label input{
+    width: 200px;
+    height: 30px;
+}
+.input-label .submit-button input{
+    margin-top: 30px;
+    width: 105px;
+    background-color: red;
+    border-radius: 3px;
+    border: 1px solid black;
+    color: white;
+}
+
+@media(max-width: 800px){
+    .container{
+        width: 98vw;
+        height: 100vh;
+    }
+    form{
+        margin-top: 20vh;
+    }
+}

@@ -1,0 +1,94 @@
+.abs-button{
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
+.abs-button button{
+    height: 50px;
+    position: sticky;
+    top: 50vh;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, .3);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.507);
+    background-color: black;
+    color: white;
+}
+
+.option-container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+.option{
+    padding: 20px;
+    border-radius: 3px;
+    display: flex;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, .3);
+    background-color: var(--white-color);
+}
+.option img{
+    width: 250px;
+    border: 3px solid rgb(70, 70, 70);
+    border-radius: 3px;
+}
+.option h3{
+    color: rgb(46, 46, 46);
+    margin-bottom: 0px;
+    text-align: start;
+}
+.option-info p{
+    color: rgb(53, 53, 53);
+    margin-top: 15px;
+    width: 250px;
+    text-align: start;
+}
+.option-info h4{
+    color: red;
+    font-weight: 900;
+    text-align: start;
+    margin-top: auto;
+}
+
+.option-info{
+    margin: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.option-info button{
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    background-color: rgb(211, 211, 211);
+    color: rgb(74, 74, 74);
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+    transition: all .1s;
+}
+.option-info button:hover{
+    background-color: rgb(186, 186, 186);
+    color: rgb(33, 33, 33);
+    scale: 1.05;
+}
+
+@media(max-width: 800px){
+    .option-container{
+        flex-wrap: wrap;
+    }
+    .option{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .option h4{
+        margin-top: 30px;
+    }
+
+    .option-info{
+        margin: 0;
+    }
+}

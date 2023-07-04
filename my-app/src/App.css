@@ -1,0 +1,13 @@
+:root{
+    --one-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    --two-font: Quattrocento;
+    --three-font: 'Caveat', cursive;
+
+    --one-color: #292F36;
+    --two-color: #FF8811;
+    --three-color: #F4D06F;
+    --four-color: #B9314F;
+    --white-color: #FFF8F0;
+}

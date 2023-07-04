@@ -1,21 +1,170 @@
+:root{
+    --hr-color: rgba(0, 0, 0, 0.09);
+}
+
 body{
-    background-image: linear-gradient(to top, white 60%, rgb(248, 248, 248));
+    background-image: linear-gradient(to top, white, rgb(250, 250, 250));
 }
 
 .blur-all{
     filter: blur(1.5px);
 }
 
-.images-container{
+.banner-landing{
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 60vh 2px #000000;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+#content{
+    background-color: #292F36;
+    padding: 50px 0;
     display: flex;
-    flex-flow: wrap;
-    align-items: flex-start;
-    gap: 15px;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: inset 12px 0 50vw rgba(0, 0, 0, 0.7);
+}
+#content .number-info{
+    text-align: start;
+    margin: 20px 6vw 20px 6vw;
+    flex: 1;
+    flex-basis: 380px;
+}
+.number-info h2{
+    font-family: var(--first-font);
+    font-size: 2.5em;
+    color: #FFF8F0;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+}
+.number-info h4{
+    font-family: var(--first-font);
+    color: #FFF8F0;
+}
+.number-info h4 span{
+    color: #F4D06F;
+    text-decoration: underline solid;
+}
+.number-info h2 span{
+    padding: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #FF8811;
+    clip-path: circle(90.4% at 49% 100%);
+}
+.number-info h2::after{
+    font-family: 'Times New Roman', Times, serif;
+    color: #FFF8F0;
+}
+.number-info #n01::after{
+    content: ' Why us';
+    text-shadow: 0 0;
+}
+.number-info #n02::after{
+    content: ' What are made of';
+    text-shadow: 0 0;
+}
+.number-info #n03::after{
+    content: ' Where are us';
+    text-shadow: 0 0;
+}
+.number-info #n04::after{
+    content: ' Recommendation';
+    text-shadow: 0 0;
+}
+#motivation{
+    color: #FFF8F0;
+    margin: 150px 350px 50px 350px;
+    font-size: 1.1em;
 }
 
-.images-container .aside-image-container{
-    display: flex;
-    flex-flow: column;
-    gap: 15px;
+.inside-banner{
+    position: relative;
+    height: 100%;
+}
+.inside-banner #start-banner{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.inside-banner #end-banner{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.inside-banner h1{
+    margin: 0 auto;
+    padding-top: 150px;
+    color: #FFF;
+    font-size: 72px;
+    font-family: var(--second-font);
+    font-style: normal;
+    font-weight: 700;
+    text-shadow: 0 5px 1px black;
+}
+.banner-landing .inside-video{
+    padding-top: 30vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+/* #banner-landing h1{
+    text-align: center;
+    line-height: 45px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 3px black;
+    font-size: 4em;
+    margin: 0 0 50px 0;
+} */
+.banner-landing p{
+    color: white;
+    font-size: .5em;
+    margin: 0 0 0 -120px;
+}
+.banner-landing p span{
+    color: rgb(219, 132, 19);
+    text-shadow: 0 .7px rgb(0, 0, 0);
+    font-size: 1.2em;
+    margin: 0;
+}
+.inside-video button{
+    border: 2px solid rgb(221, 124, 86);
+    border-radius: 10px;
+    max-width: 350px;
+    min-width: 250px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    transition: all 1s;
+}
+.inside-video button:hover{
+    scale: 1.1;
+    font-size: 1.1em;
+}
+
+.radius-right{
+    border-radius: 0 25px 25px 0;
+}
+.radius-left{
+    border-radius: 25px 0 0 25px;
+}
+.bar-between{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 10px;
+    height: 140px;
+    margin: auto;
+    position: static;
+    display: inline-block;
+}
+
+@media(max-width: 800px)
+{
+    .banner-landing .inside-video{
+        margin: 0 auto;
+    }
 }
