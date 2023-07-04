@@ -1,3 +1,4 @@
-1 - Motivacional Phrase not responsive
-2 - Navigation on mobile/solid has box-shadow inset
-3 - Menu page in mobile, have a white space on top
+* 
+* Motivacional Phrase not responsive - DONE
+* Navigation on mobile/solid has box-shadow inset - DONE
+* Menu page in mobile, have a white space on top - DONE

@@ -1,0 +1,38 @@
+.input-field{
+    margin: auto 0;
+    height: 30px;
+    margin-right: 90px;
+    position: relative;
+}
+input{
+    height: 25px;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    padding: 3px 15px;
+    font-family: var(--one-font);
+    font-weight: bold;
+}
+.input-field img{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+
+.suggestion{
+    
+}
+.suggestion button{
+    position: relative;
+    display: block;
+    border: none;
+    z-index: 2;
+    margin: 0;
+    padding: 6px 0;
+    width: 100%;
+    background-color: white;
+}
+.suggestion button:hover{
+    background-color: rgb(232, 232, 232);
+}

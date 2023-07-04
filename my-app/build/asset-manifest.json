@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PizzaWebReact/static/css/main.dea20030.css",
-    "main.js": "/PizzaWebReact/static/js/main.af5bab85.js",
+    "main.css": "/PizzaWebReact/static/css/main.3cecb0ce.css",
+    "main.js": "/PizzaWebReact/static/js/main.859bbaa8.js",
     "static/js/787.28cb0dcd.chunk.js": "/PizzaWebReact/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/PizzaWebReact/index.html",
-    "main.dea20030.css.map": "/PizzaWebReact/static/css/main.dea20030.css.map",
-    "main.af5bab85.js.map": "/PizzaWebReact/static/js/main.af5bab85.js.map",
+    "main.3cecb0ce.css.map": "/PizzaWebReact/static/css/main.3cecb0ce.css.map",
+    "main.859bbaa8.js.map": "/PizzaWebReact/static/js/main.859bbaa8.js.map",
     "787.28cb0dcd.chunk.js.map": "/PizzaWebReact/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dea20030.css",
-    "static/js/main.af5bab85.js"
+    "static/css/main.3cecb0ce.css",
+    "static/js/main.859bbaa8.js"
   ]
 }

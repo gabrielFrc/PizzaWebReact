@@ -4,6 +4,8 @@ import Footer from '../../components/footer';
 import MenuOptions from './menu-options';
 import { useState } from 'react';
 
+import FilterInput from '../../components/filter-input';
+
 const Menu = () => {
     class linkButton {
         constructor(routeId, name, img, redirect) {
@@ -55,8 +57,9 @@ const Menu = () => {
         <>
             <Navigation button={buttonList} darkMode={true} windowHeight={-50} showCategories={true}/>
             <main id='menu-main'>
-                <div className="menu-title">
-                    <h1>{menuTitle}</h1>
+                <div className="upper-menu">
+                    <h1 id='menu-title'>{menuTitle}</h1>
+                    <FilterInput/>
                 </div>
                 {/* {categorySelected === 'null' ? <>{categorySelectElement}</> : null} */}
                 <MenuOptions categorySelected={categorySelected} setCategory={setCategory}/>

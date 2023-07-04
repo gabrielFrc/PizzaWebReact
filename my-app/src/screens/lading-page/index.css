@@ -75,7 +75,7 @@ body{
 }
 #motivation{
     color: #FFF8F0;
-    margin: 150px 350px 50px 350px;
+    margin: 150px 20vw 50px 20vw;
     font-size: 1.1em;
 }
 
@@ -166,5 +166,8 @@ body{
 {
     .banner-landing .inside-video{
         margin: 0 auto;
+    }
+    .inside-banner h1{
+        padding-top: 300px;
     }
 }

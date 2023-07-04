@@ -6,15 +6,17 @@
     box-shadow: inset 12px 0 50vw rgba(0, 0, 0, 0.7);
 }
 
-.menu-title{
-    font-family: var(--three-font);
-    font-weight: 700;
-    font-size: 1.5em;
-    color: var(--white-color);
+.upper-menu{
+    display: flex;
+    justify-content: space-between;
 }
-.menu-title h1{
+.upper-menu h1{
     text-align: start;
     margin-left: 90px;
+    font-family: var(--three-font);
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--white-color);
 }
 
 .food-category{
@@ -52,10 +54,17 @@
 
 @media(max-width: 800px){
     #menu-main{
-        margin-top: 150px;
+        padding-top: 150px;
     }
 
     .food-container{
         min-width: 55vw;
+    }
+
+    .upper-menu h1{
+        margin-left: 45px;
+    }
+    .upper-menu .input-field{
+        margin-right: 45px;
     }
 }
