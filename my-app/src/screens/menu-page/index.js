@@ -25,21 +25,6 @@ const Menu = () => {
     buttonList.push(new linkButton('/', <p>Stores</p>, null, false))
     buttonList.push(new linkButton('/', <p>Promotions</p>, null, false))
 
-    // let categorySelectElement = <div className='food-category'>
-    //     <div className='food-container' onClick={() => {
-    //         setCategory('pizza');
-    //     }}>
-    //         <img src='https://i0.wp.com/www.multarte.com.br/wp-content/uploads/2019/03/pizza-png5.png?resize=696%2C395&ssl=1' alt='category'></img>
-    //         <h2>Pizza</h2>
-    //     </div>
-    //     <div className='food-container' onClick={() => {
-    //         setCategory('drink');
-    //     }}>
-    //         <img src='https://freepngimg.com/thumb/drinks/6-2-drink-png-9-thumb.png' alt='category'></img>
-    //         <h2>Drink</h2>
-    //     </div>
-    // </div>
-
     let menuTitle = ""
     switch (categorySelected) {
         case "pizza":
@@ -52,6 +37,9 @@ const Menu = () => {
             menuTitle = "Menu"
             break;
     }
+    
+    const [ filter, setFilter ] = useState('')
+    console.log('Updated MENU-PAGE filter to ' + filter)
 
     return (
         <>
@@ -59,10 +47,11 @@ const Menu = () => {
             <main id='menu-main'>
                 <div className="upper-menu">
                     <h1 id='menu-title'>{menuTitle}</h1>
-                    <FilterInput/>
+                    <FilterInput setFilter={setFilter}/>
                 </div>
-                {/* {categorySelected === 'null' ? <>{categorySelectElement}</> : null} */}
-                <MenuOptions categorySelected={categorySelected} setCategory={setCategory}/>
+                <MenuOptions categorySelected={categorySelected} 
+                setCategory={setCategory}
+                filter={filter}/>
             </main>
             <Footer />
         </>

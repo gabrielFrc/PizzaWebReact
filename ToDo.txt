@@ -1,4 +1,4 @@
-* 
+* Fazer mais ajustes no filter do menu-page ex: outras opções de enter
 * Motivacional Phrase not responsive - DONE
 * Navigation on mobile/solid has box-shadow inset - DONE
 * Menu page in mobile, have a white space on top - DONE

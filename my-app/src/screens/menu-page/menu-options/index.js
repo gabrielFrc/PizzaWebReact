@@ -3,7 +3,7 @@ import './index.css'
 
 const MenuOptions = (props) => {
     let [products, setProducts] = useState();
-    
+
     useEffect(() => {
         fetch(process.env.PUBLIC_URL + '/api/products.json')
             .then(response => response.json())
@@ -13,41 +13,48 @@ const MenuOptions = (props) => {
             .catch((err) => { console.log(err) });
     }, [])
 
-    let pizzaElement =
-        products?.pizza.map((p) => {
-            return (
-                <Fragment key={p.id}>
-                    <div className='option'>
-                        <img src={p.image_url} alt='pizza'></img>
-                        <div className='option-info'>
-                            <h3>{p.title}</h3>
-                            <p>{p.description}</p>
-                            <h4>{p.price}</h4>
-                            <button>Add To Cart</button>
-                        </div>
-                    </div>
-                </Fragment>
-            )
+    const compare = (filter, tags) => {
+        if(filter.length >= 0 && tags.length > 0){
+            let result = false;
+            tags.map(element => {
+                console.log('tag ' + element)
+                if(element.toLowerCase().includes(filter.toLowerCase())){
+                    result = true;
+                }
+                return true;
+            })
+            return result;
+        }
+        else{
+            return false;
+        }
+    }
+
+    let elementProducts;
+    if (products != null){
+        elementProducts = Object.values(products).map(k => {
+            return k.map(element => {
+                if(compare(props.filter, element.tags)){
+
+                    return (
+                        <Fragment key={element.id}>
+                            <div className='option'>
+                                <img src={element.image_url} alt='product'></img>
+                                <div className='option-info'>
+                                    <h3>{element.title}</h3>
+                                    <p>{element.description}</p>
+                                    <h4>{element.price}</h4>
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </Fragment>
+                    )
+                }else{
+                    return null
+                }
+            })
         })
-
-
-    let drinkElement =
-        products?.drink.map((p) => {
-            return (
-                <Fragment key={p.id}>
-                    <div className='option'>
-                        <img src={p.image_url} alt='pizza'></img>
-                        <div className='option-info'>
-                            <h3>{p.title}</h3>
-                            <p>{p.description}</p>
-                            <h4>{p.price}</h4>
-                            <button>Add To Cart</button>
-                        </div>
-                    </div>
-                </Fragment>
-            )
-        })
-
+    }
 
     return (
         <>
@@ -57,10 +64,7 @@ const MenuOptions = (props) => {
                         props.setCategory('null')
                     }}>Categories</button>
                 </div>
-                {/* {props.categorySelected === 'pizza' ? pizzaElement : null}
-                {props.categorySelected === 'drink' ? drinkElement : null} */}
-                {pizzaElement}
-                {drinkElement}
+                {elementProducts}
             </div>
         </>
     )
