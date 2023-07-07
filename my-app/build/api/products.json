@@ -6,7 +6,7 @@
             "description": "Tomato sauce, mozzarella cheese, and basil.",
             "price": "$10.00",
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPo8g3lSutkilAb2YvQ2kbTMPFtXib4pgz1A&usqp=CAU",
-            "tags": ["pizza", "Anttetet"]
+            "tags": ["Pizza", "Margherita"]
         },
         {
             "id": 1,
@@ -14,7 +14,7 @@
             "description": "Tomato sauce, mozzarella cheese, and pepperoni.",
             "price": "$12.00",
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9t1cSDTAWHA-LOt845-HHTb-mbmdyiqNq6g&usqp=CAU",
-            "tags": ["pizza"]
+            "tags": ["Pizza", "Pepperoni"]
         },
         {
             "id": 2,
@@ -22,23 +22,23 @@
             "description": "Tomato sauce, mozzarella cheese, ham, and pineapple.",
             "price": "$15.00",
             "image_url": "https://media.istockphoto.com/id/1349383878/photo/hawaiian-pizza-with-ham-and-pineapple.jpg?s=612x612&w=0&k=20&c=P7rJNWhe1utWDDXUa4ZyZdnl4C5he8jfWD-dKf_hefI=",
-            "tags": ["pizza"]
+            "tags": ["Pizza", "Hawaiian"]
         },
         {
             "id": 3,
-            "title": "Meat Lover’s",
+            "title": "Meat",
             "description": "Tomato sauce, mozzarella cheese, pepperoni, sausage, bacon, and ham.",
             "price": "$20.00",
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3H0dDF93SYTkIM01Qr9wsYfv8krkDHvgyA19Csn8NIA7G7X4h8QmS5QSd2CsWYhEpVNU&usqp=CAU",
-            "tags": ["pizza"]
+            "tags": ["Pizza", "Meat"]
         },
         {
             "id": 4,
-            "title": "Veggie Lover’s",
+            "title": "Veggie",
             "description": "Tomato sauce, mozzarella cheese, mushrooms, onions, green peppers, and black olives.",
             "price": "$18.00",
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DTdtI07YGoy0m_85wNKT7klv_e8BH4OYeo45X9BL09jkEOpQ_sy-jQvAjBD7Xn91wIs&usqp=CAU",
-            "tags": ["pizza"]
+            "tags": ["Pizza", "Veggie"]
         },
         {
             "id": 5,
@@ -46,7 +46,7 @@
             "description": "Thick crust pizza with tomato sauce and mozzarella cheese. Toppings can include pepperoni or sausage.",
             "price": "$22.00",
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnDX4D6IiIGVohTyrLwSawjcJpKcfWtddds-3kzir3K18e1or3fELgFqN7p_tw5S6XwtM&usqp=CAU",
-            "tags": ["pizza"]
+            "tags": ["Pizza", "Sicilian"]
         }
     ],
     "drink": [
@@ -56,7 +56,7 @@
             "description": "A classic drink that goes well with pizza.",
             "price": "$2.50",
             "image_url": "https://cdn.mos.cms.futurecdn.net/48yDps3EbdskuitmhQqSq9.jpg",
-            "tags": ["drink"]
+            "tags": ["Drink", "Soda"]
         },
         {
             "id": 1,
@@ -64,7 +64,7 @@
             "description": "A refreshing lager like Peroni Nastro Azzurro is perfect with pizza.",
             "price": "$5.00",
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEAr1H6cFil1Z9YOtUSMhK0n52Xvb73kzew&usqp=CAU",
-            "tags": ["drink"]
+            "tags": ["Drink", "Beer"]
         },
         {
             "id": 2,
@@ -72,7 +72,7 @@
             "description": "A refreshing drink that goes well with pizza.",
             "price": "$3.00",
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIlxtFTaRRHfO2jU2BIVKDiYPTU0zP7mdqUwhdZQ30amI8YScf8NCPya6ZFamXh4K8cwk&usqp=CAU",
-            "tags": ["drink"]
+            "tags": ["Drink", "Lemonade"]
         },
         {
             "id": 3,
@@ -80,7 +80,7 @@
             "description": "A refreshing drink that goes well with pizza.",
             "price": "$2.50",
             "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd3W8w5jUGTqQzf5X339lQ2ZyzKLByfQXtoJrSvA43Ug_5XCCaRueEirVKmdZGIr2FDsA&usqp=CAU",
-            "tags": ["drink"]
+            "tags": ["Drink", "Iced tea"]
         },
         {
             "id": 4,
@@ -88,7 +88,7 @@
             "description": "A healthy option that goes well with pizza.",
             "price": "$3.50",
             "image_url": "https://media.istockphoto.com/id/178416773/photo/some-glasses-with-strawberry-liqueur.jpg?s=612x612&w=0&k=20&c=wo7eqLKBOV-FQZ15Lo7A3RMLPAdvwbkVPqlZm_GM9pc=",
-            "tags": ["drink"]
+            "tags": ["Drink", "Fruit juice", "Fruit", "Juice"]
         }
     ]
 }

@@ -1,7 +1,11 @@
 import { Fragment, useEffect, useState } from 'react';
 import './index.css'
+import { useDispatch } from 'react-redux';
+import { AddProduct } from '../../../features/products-on-cart/productsCartSlice';
 
 const MenuOptions = (props) => {
+    const dispatch = useDispatch();
+    
     let [products, setProducts] = useState();
 
     useEffect(() => {
@@ -17,7 +21,6 @@ const MenuOptions = (props) => {
         if(filter.length >= 0 && tags.length > 0){
             let result = false;
             tags.map(element => {
-                console.log('tag ' + element)
                 if(element.toLowerCase().includes(filter.toLowerCase())){
                     result = true;
                 }
@@ -44,7 +47,9 @@ const MenuOptions = (props) => {
                                     <h3>{element.title}</h3>
                                     <p>{element.description}</p>
                                     <h4>{element.price}</h4>
-                                    <button>Add To Cart</button>
+                                    <button onClick={() => {
+                                        dispatch(AddProduct(element))
+                                    }}>Add To Cart</button>
                                 </div>
                             </div>
                         </Fragment>

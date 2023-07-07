@@ -20,7 +20,7 @@ const Menu = (props) =>{
                     document.querySelector('header').classList.add('solid-header')
                     document.querySelector('body').classList.add('hide-scroll')
                     setShowMenu(true);
-                }else{
+                }else if(showMenu){
                     element.classList.add('display-none');
                     setShowMenu(false);
                     document.querySelector('header').classList.remove('solid-header')

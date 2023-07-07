@@ -1,4 +1,8 @@
+* DONE | ** NOT DONE
+
+** Refazer a parte de solid/transparent no navigation (botar o controle de isOnMobile em um lugar
+amplo tipo o app.js) 
 * Fazer mais ajustes no filter do menu-page ex: outras opções de enter
-* Motivacional Phrase not responsive - DONE
-* Navigation on mobile/solid has box-shadow inset - DONE
-* Menu page in mobile, have a white space on top - DONE
+* Motivacional Phrase not responsive
+* Navigation on mobile/solid has box-shadow inset
+* Menu page in mobile, have a white space on top

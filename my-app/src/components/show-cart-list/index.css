@@ -4,7 +4,7 @@
 
 .cart-div{
     height: 100vh;
-    width: 400px;
+    width: 40vw;
     background-color: white;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .7);
     position: fixed;
@@ -24,8 +24,7 @@
 }
 
 .cart-div hr{
-    margin: 0;
-    width: 80%;
+    margin: 0 10%;
     height: 2px;
     background-color: rgb(2, 0, 33);
     border: none;
@@ -38,6 +37,17 @@
 
 .list-of-pizzas p{
     margin: 50px 25px;
+}
+
+#product{
+    font-family: var(--one-font);
+    font-weight: normal;
+}
+#product-quantity{
+    font-family: var(--one-font);
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: underline solid red;
 }
 
 .cart-div > img{

@@ -3,11 +3,15 @@ import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import './index.css';
 import { useNavigate } from 'react-router-dom';
+
 // MY COMPONENTS
 import LoginSection from '../login-section';
 import ShowCartList from '../show-cart-list';
 import BlurConfig from './blur-config';
 import Menu from './menu-config';
+
+// REDUX 
+import { useSelector } from 'react-redux';
 
 const Navigation = (props) => {
     /* Login configs */
@@ -18,6 +22,12 @@ const Navigation = (props) => {
         showCart: false,
         cartQuantity: 0
     });
+
+    const { productsOnCart } = useSelector(state => state.productsOnCart)
+    // useEffect(() => {
+    //     setCart(bf => ({...bf, cartQuantity: productsOnCart.length}))
+    // }, [productsOnCart]);
+
     const updateCart = (newValue) => {
         setCart((prevCart) => ({...prevCart, showCart : newValue}))
     }
@@ -58,7 +68,6 @@ const Navigation = (props) => {
                 setPositive(true)
             }
         }
-        console.log(positive)
 
         window.addEventListener('scroll', scrollHandle)
     })
@@ -111,7 +120,7 @@ const Navigation = (props) => {
                                         setLogin(false);
                                     }}>
                                         <div className={`cart-quantity ${!props.darkMode ? '' : 'filter-grayscale'}`}>
-                                            <p>{cart.cartQuantity}</p>
+                                            <p>{productsOnCart.length}</p>
                                         </div>
                                         <p className={!props.darkMode ? 'black-letter' : 'white-letter'}>Cart</p>
                                     </button>
@@ -132,8 +141,8 @@ const Navigation = (props) => {
             {isLoginOn ? <LoginSection setLogin={(newValue) => {
                 setLogin(newValue)
             }}/> : null}
-            {cart.showCart ? <ShowCartList quant={cart.cartQuantity} 
-            updateCart={updateCart} cartState={cart.showCart} /> : null}
+            {cart.showCart ? <ShowCartList
+            updateCart={updateCart} /> : null}
         </>
     )
 }
