@@ -8,10 +8,22 @@ export const slice = createSlice({
     reducers: {
         AddProduct(state, {payload}){
             return{...state, productsOnCart: [...state.productsOnCart, payload]}
+        },
+        RemoveProduct(state, {payload}){
+            let productNotFound = true;
+            
+            const newSt = state.productsOnCart.filter((v) => {
+                if(v.title === payload.title && productNotFound){
+                    productNotFound = false;
+                    return false;
+                }
+                return true;
+            })
+            return{...state, productsOnCart: [...newSt]}
         }
     }
 });
 
-export const { AddProduct } = slice.actions;
+export const { AddProduct, RemoveProduct } = slice.actions;
 
 export default slice.reducer;
