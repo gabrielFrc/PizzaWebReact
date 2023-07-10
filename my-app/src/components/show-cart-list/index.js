@@ -16,7 +16,6 @@ function ShowCartList(props) {
     }
 
     let listOfProducts = [];
-    console.log(listOfProducts)
 
     Object.values(productsOnCart).map(keyV => {
         let elementAlrExists = false;
@@ -24,10 +23,19 @@ function ShowCartList(props) {
         for (let index = 0; index < listOfProducts.length; index++) {
             if (listOfProducts[index].title.includes(keyV.title)) {
                 listOfProducts[index] = { ...listOfProducts[index], quantity: listOfProducts[index].quantity + 1 }
+
+                const dolarValue = productsTotal.totalDolar + parseFloat(keyV.price.replace('$', ''));
+                productsTotal = { ...productsTotal, totalDolar: dolarValue}
+
                 elementAlrExists = true;
             }
         }
-        !elementAlrExists && listOfProducts.push({...keyV, quantity: 1})
+        if(!elementAlrExists){
+            listOfProducts.push({...keyV, quantity: 1})
+
+            const dolarValue = productsTotal.totalDolar + parseFloat(keyV.price.replace('$', ''));
+            productsTotal = { ...productsTotal, totalDolar: dolarValue}
+        }
         productsTotal = { ...productsTotal, totalItens: productsTotal.totalItens + 1 }
 
         return null
@@ -56,7 +64,7 @@ function ShowCartList(props) {
                             <div>{listOfProducts.map(el => {
                                 return (
                                     <div id='product-container' key={el.title}>
-                                        <div style={{display: 'flex'}}>
+                                        <div id='image-title' style={{display: 'flex'}}>
                                             <img src={el.image_url}
                                                 alt='product'
                                                 width={100}
@@ -66,6 +74,9 @@ function ShowCartList(props) {
                                                 {`${el.title} `}
                                                 {/* <p>{el.description}</p> */}
                                             </h3>
+                                        </div>
+                                        <div id='product-price'>
+                                            <h4>{'$' + parseFloat(el.price.replace('$', '') * el.quantity).toFixed(2)}</h4>
                                         </div>
                                         <div id='button-add-remove'>
                                             <button onClick={ () => {
@@ -83,6 +94,9 @@ function ShowCartList(props) {
                             })}</div> :
                             <p>You dont have any item on your cart.</p>
                     }
+                    <div id='total-value'>
+                        <h3>{`Value total: ${'$' + productsTotal.totalDolar.toFixed(2)}`}</h3>
+                    </div>
                 </div>
                 <div className='order-button'>
                     {productsOnCart.length > 0 ? order : noProduct}
