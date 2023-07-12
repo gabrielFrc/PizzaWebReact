@@ -1,5 +1,6 @@
 * DONE | ** NOT DONE
 
+** Only works one time, dont wokrs when resizing width screen !!!!!!!!!!!!!!!! (navigation)
 ** passo 2 -> Troca de tela de mobile para desktop buga o navigation
 ** passos -> Abrir menu e depois abrir carrinho, fechar e o navigation vai ficar invisivel
 ** Refazer a parte de solid/transparent no navigation (botar o controle de isOnMobile em um lugar

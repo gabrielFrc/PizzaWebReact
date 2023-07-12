@@ -28,26 +28,9 @@ const LandingPage = () => {
     AOS.init();
     const dispatch = useDispatch();
 
-    // const [windowHeight, setWindowHeight] = useState(-50);
-
-    // const setHeight = () => {
-    //     setWindowHeight(window.scrollY - document.getElementById('vid').offsetHeight);
-    // }
-
     const { isOnMobile } = useSelector(state => state.controlEvents)
 
     useEffect(() => {
-        if (window.innerWidth < 800) {
-            dispatch(SetMobile(true))
-        }
-        else if (window.innerWidth > 800) {
-            dispatch(SetMobile(false))
-        }
-    }, [dispatch])
-
-    useEffect(() => {
-        // document.addEventListener("scroll", setHeight);
-
         const videoSetter = () => {
             if (window.innerWidth < 900 && !isOnMobile) {
                 dispatch(SetMobile(true))
@@ -60,13 +43,12 @@ const LandingPage = () => {
         window.addEventListener("resize", videoSetter);
 
         return () => {
-            // document.removeEventListener("scroll", setHeight)
             window.removeEventListener("resize", videoSetter);
         }
-    })
+    }, [dispatch, isOnMobile])
     return (
         <>
-            <Nav button={buttonList} windowHeight={-50} darkMode={true} isOnMobile={isOnMobile} showCategories={false} />
+            <Nav button={buttonList} windowHeight={-50} darkMode={true} showCategories={false} />
             <main>
                 <div className='banner-landing'
                     style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/main-images/princ-bg.png"})` }}>

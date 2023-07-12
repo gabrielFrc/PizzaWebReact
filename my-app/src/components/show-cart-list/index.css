@@ -90,7 +90,7 @@
 #button-add-remove button{
     background-color: var(--white-color);
     padding: 10px auto;
-    margin: auto 15px;
+    margin: auto 5px;
     border-radius: 5px;
 }
 #button-add-remove button:hover{
@@ -116,7 +116,7 @@
     font-weight: bold;
 }
 
-@media(max-width: 800px){
+@media(max-width: 1140px){
     .cart-div{
         width: 100vw;
     }

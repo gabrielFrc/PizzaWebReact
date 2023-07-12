@@ -9,9 +9,11 @@ import LoginSection from '../login-section';
 import ShowCartList from '../show-cart-list';
 import BlurConfig from './blur-config';
 import Menu from './menu-config';
+import Appearence from './navigation-appearence/header-appearence';
 
 // REDUX 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { SetMobile } from '../../features/events-control/eventsControlSlice';
 
 const Navigation = (props) => {
     /* Login configs */
@@ -24,29 +26,42 @@ const Navigation = (props) => {
     });
 
     const { productsOnCart } = useSelector(state => state.productsOnCart)
-    // useEffect(() => {
-    //     setCart(bf => ({...bf, cartQuantity: productsOnCart.length}))
-    // }, [productsOnCart]);
 
     const updateCart = (newValue) => {
         setCart((prevCart) => ({...prevCart, showCart : newValue}))
     }
-    if(cart.showCart || isLoginOn){
-        document.querySelector('body')?.classList.add('hide-scroll')
-    }
-    else{
-        document.querySelector('body')?.classList.remove('hide-scroll')
-    }
+
+    const { isOnMobile } = useSelector(state => state.controlEvents)
+    const [mobile, setMobile] = useState();
+    useEffect(() => {
+        setMobile(isOnMobile);
+    }, [isOnMobile])
+    
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        if( !props.isOnMobile){
-            if(props.windowHeight < -40){
-                document.querySelector('header')?.classList.remove('solid-header');
+        window.addEventListener('resize', (e) => {
+            if (window.innerWidth < 800) {
+                dispatch(SetMobile(true))
             }
-            document.querySelector('.sub-nav')?.classList.add('display-none');
+            else if (window.innerWidth > 800) {
+                dispatch(SetMobile(false))
+            }
+        })
+        if (window.innerWidth < 800) {
+            dispatch(SetMobile(true))
         }
+        else if (window.innerWidth > 800) {
+            dispatch(SetMobile(false))
+        }
+    }, [dispatch])
 
-    }, [props.isOnMobile, props.windowHeight])
+        if(cart.showCart || isLoginOn){
+            document.querySelector('body')?.classList.add('hide-scroll')
+        }
+        else{
+            document.querySelector('body')?.classList.remove('hide-scroll')
+        }
 
     /* Direct configs */
     let navigate = useNavigate();
@@ -70,15 +85,22 @@ const Navigation = (props) => {
         }
 
         window.addEventListener('scroll', scrollHandle)
-    })
+    }, [])
     useEffect(() => {
         setPositive(true);
     }, [])
 
+    const head = useRef();
+
     return (
         <> {/* Principal Return */}
+            <Appearence head={head.current}
+                        darkMode={props.darkMode} 
+                        isOnMobile={isOnMobile} 
+                        positive={positive}/>
             { 
-                <header className={`${!props.darkMode ? 'solid-header' : 'transparent-header'} ${positive ? null : ' hide-nav'}`}>
+                <header ref={head}>
+                {/*<header ref={head} className={`${(!props.darkMode && !mobile) ? 'solid-header' : 'transparent-header'} ${(positive) ? null : ' hide-nav'}`}> */}
                     <nav>
                         <div className='main-nav'>
                             <figure>
@@ -90,7 +112,7 @@ const Navigation = (props) => {
 
                                 </img>
                             </figure>
-                            <Menu screenPos={props.windowHeight} isOnMobile={props.isOnMobile}/>
+                            { mobile && <Menu screenPos={props.windowHeight}/>}
                         </div>
                         <div className='sub-nav display-none'>
                             <div className='create-button'>

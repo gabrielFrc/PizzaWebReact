@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const Menu = (props) =>{
+    const { isOnMobile } = useSelector(state => state.controlEvents)
+    
     let [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
-        setShowMenu(false)
-    }, [props.isOnMobile])
+        document.querySelector('.sub-nav').classList.add('display-none');
+        document.querySelector('header').classList.remove('solid-header')
+    }, [isOnMobile])
 
     let invertColor = {
         filter: 'invert(100%)'
@@ -17,14 +21,12 @@ const Menu = (props) =>{
                 const element = document.querySelector('.sub-nav');
                 if(!showMenu){
                     element.classList.remove('display-none');
-                    document.querySelector('header').classList.add('solid-header')
-                    document.querySelector('body').classList.add('hide-scroll')
+                    document.querySelector('header').classList.add('solid-header');
                     setShowMenu(true);
                 }else if(showMenu){
                     element.classList.add('display-none');
+                    document.querySelector('header').classList.remove('solid-header');
                     setShowMenu(false);
-                    document.querySelector('header').classList.remove('solid-header')
-                    document.querySelector('body').classList.remove('hide-scroll')
                 }
             }}></img>
         </div>
