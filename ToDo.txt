@@ -1,9 +1,9 @@
 * DONE | ** NOT DONE
 
-** Only works one time, dont wokrs when resizing width screen !!!!!!!!!!!!!!!! (navigation)
-** passo 2 -> Troca de tela de mobile para desktop buga o navigation
-** passos -> Abrir menu e depois abrir carrinho, fechar e o navigation vai ficar invisivel
-** Refazer a parte de solid/transparent no navigation (botar o controle de isOnMobile em um lugar
+* Only works one time, dont wokrs when resizing width screen !!!!!!!!!!!!!!!! (navigation)
+* passo 2 -> Troca de tela de mobile para desktop buga o navigation
+* passos -> Abrir menu e depois abrir carrinho, fechar e o navigation vai ficar invisivel
+* Refazer a parte de solid/transparent no navigation (botar o controle de isOnMobile em um lugar
 amplo tipo o app.js) 
 * Fazer mais ajustes no filter do menu-page ex: outras opções de enter
 * Motivacional Phrase not responsive
