@@ -3,7 +3,7 @@
 }
 #menu-main{
     background-color: var(--one-color);
-    box-shadow: inset 12px 0 50vw rgba(0, 0, 0, 0.7);
+    box-shadow: inset 12px 0 50vw rgba(0, 0, 0, 0.5);
 }
 
 .upper-menu{

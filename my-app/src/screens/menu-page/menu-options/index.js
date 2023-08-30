@@ -64,11 +64,6 @@ const MenuOptions = (props) => {
     return (
         <>
             <div className='option-container'>
-                <div className='abs-button'>
-                    <button onClick={() => {
-                        props.setCategory('null')
-                    }}>Categories</button>
-                </div>
                 {elementProducts}
             </div>
         </>

@@ -93,14 +93,13 @@ const Navigation = (props) => {
     const head = useRef();
 
     return (
-        <> {/* Principal Return */}
+        <>
             <Appearence head={head.current}
                         darkMode={props.darkMode} 
                         isOnMobile={isOnMobile} 
                         positive={positive}/>
             { 
                 <header ref={head}>
-                {/*<header ref={head} className={`${(!props.darkMode && !mobile) ? 'solid-header' : 'transparent-header'} ${(positive) ? null : ' hide-nav'}`}> */}
                     <nav>
                         <div className='main-nav'>
                             <figure>
@@ -112,6 +111,7 @@ const Navigation = (props) => {
 
                                 </img>
                             </figure>
+                            { /* This below might not have an utility0.*/ }
                             { mobile && <Menu screenPos={props.windowHeight}/>}
                         </div>
                         <div className='sub-nav display-none'>
