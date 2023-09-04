@@ -1,4 +1,4 @@
-import Nav from '../../../src/components/navigation'
+import Nav from '../../../src/components/navigation/navigation'
 import Footer from '../../components/footer';
 import './index.css'
 import { useEffect } from 'react';

@@ -2,14 +2,14 @@
 import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import './index.css';
+import './mobile.css';
 import { useNavigate } from 'react-router-dom';
 
 // MY COMPONENTS
 import LoginSection from '../login-section';
 import ShowCartList from '../show-cart-list';
 import BlurConfig from './blur-config';
-import Menu from './menu-config';
-import Appearence from './navigation-appearence/header-appearence';
+import Menu from './navigation-mobile';
 
 // REDUX 
 import { useSelector, useDispatch } from 'react-redux';
@@ -91,18 +91,21 @@ const Navigation = (props) => {
     }, [])
 
     const head = useRef();
+    useEffect(() => {
+        if(!positive)
+            head.current.classList.add('nav-bar-disappear')
+        else{
+            head.current.classList.remove('nav-bar-disappear')
+        }
+    }, [positive])
 
     return (
         <>
-            <Appearence head={head.current}
-                        darkMode={props.darkMode} 
-                        isOnMobile={isOnMobile} 
-                        positive={positive}/>
             { 
                 <header ref={head}>
-                    <nav>
+                    <nav id='nav'>
                         <div className='main-nav'>
-                            <figure>
+                            <figure className='figure-logo'>
                                 <img style={props.darkMode ? {filter: "grayscale(100%)"} : null} 
                                     className={`logo-img`} 
                                     src={process.env.PUBLIC_URL + '/navigation-images/logo.png'} 
@@ -112,7 +115,6 @@ const Navigation = (props) => {
                                 </img>
                             </figure>
                             { /* This below might not have an utility0.*/ }
-                            { mobile && <Menu screenPos={props.windowHeight}/>}
                         </div>
                         <div className='sub-nav display-none'>
                             <div className='create-button'>
@@ -120,7 +122,7 @@ const Navigation = (props) => {
                                     props.button.map((element, i) => {
                                         return (
                                             <React.Fragment key={i}>
-                                                <button className={!props.darkMode ? 'black-letter' : 'white-letter'} onClick={() => {
+                                                <button onClick={() => {
                                                     setCart( (prevCart) => ({...prevCart, showCart : false}) );
                                                     
                                                     if(element.routeId === '/login')
@@ -150,6 +152,7 @@ const Navigation = (props) => {
                                 : null
                             }
                         </div>
+                        { mobile && <Menu />}
                     </nav>
                     {props.extraNav != null ? <>{props.extraNav}</> : null}
                     {!props.darkMode ? null : <hr id='navigation-hr'/>}

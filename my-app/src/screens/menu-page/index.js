@@ -1,5 +1,5 @@
 import './index.css'
-import Navigation from "../../components/navigation";
+import Navigation from "../../components/navigation/navigation";
 import Footer from '../../components/footer';
 import MenuOptions from './menu-options';
 import { useState } from 'react';
