@@ -1,23 +1,29 @@
 import './index.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { AddProduct, RemoveProduct } from '../../features/products-on-cart/productsCartSlice';
+import { AddProduct, RemoveProduct, ResetProducts } from '../../features/products-on-cart/productsCartSlice';
+import { useEffect } from 'react';
 
 function ShowCartList(props) {
     const dispatch = useDispatch();
 
     let order = <button>Order all</button>
     let noProduct = <button>See our products</button>
-
+    
     const { productsOnCart } = useSelector(state => state.productsOnCart);
+
+    useEffect(() => {
+        dispatch(ResetProducts(JSON.parse(localStorage.getItem("myproducts"))))
+    }, [dispatch])
 
     let productsTotal = {
         totalItens: 0,
         totalDolar: 0.00,
     }
+    
 
     let listOfProducts = [];
 
-    Object.values(productsOnCart).map(keyV => {
+    Object.values(JSON.parse(localStorage.getItem("myproducts"))).map(keyV => {
         let elementAlrExists = false;
 
         for (let index = 0; index < listOfProducts.length; index++) {
@@ -60,7 +66,7 @@ function ShowCartList(props) {
                 <hr />
                 <div className='list-of-pizzas'>
                     {
-                        productsOnCart.length > 0 ?
+                        listOfProducts.length > 0 ?
                             <div>{listOfProducts.map(el => {
                                 return (
                                     <div id='product-container' key={el.title}>

@@ -27,6 +27,11 @@ const Navigation = (props) => {
 
     const { productsOnCart } = useSelector(state => state.productsOnCart)
 
+    useEffect(() => {
+        if(localStorage.getItem("myproducts") != null)
+            setCart((prevCart) => ({ ...prevCart, cartQuantity : JSON.parse(localStorage.getItem("myproducts")).length }))
+    }, [productsOnCart])
+
     const updateCart = (newValue) => {
         setCart((prevCart) => ({...prevCart, showCart : newValue}))
     }
@@ -144,7 +149,7 @@ const Navigation = (props) => {
                                         setLogin(false);
                                     }}>
                                         <div className={`cart-quantity ${!props.darkMode ? '' : 'filter-grayscale'}`}>
-                                            <p>{productsOnCart.length}</p>
+                                            <p>{cart.cartQuantity}</p>
                                         </div>
                                         <p className={!props.darkMode ? 'black-letter' : 'white-letter'}>Cart</p>
                                     </button>
