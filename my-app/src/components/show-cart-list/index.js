@@ -8,11 +8,12 @@ function ShowCartList(props) {
 
     let order = <button>Order all</button>
     let noProduct = <button>See our products</button>
-    
+
     const { productsOnCart } = useSelector(state => state.productsOnCart);
 
     useEffect(() => {
-        dispatch(ResetProducts(JSON.parse(localStorage.getItem("myproducts"))))
+        if(localStorage.getItem("myproducts") != null)
+            dispatch(ResetProducts(JSON.parse(localStorage.getItem("myproducts"))))
     }, [dispatch])
 
     let productsTotal = {
@@ -23,29 +24,30 @@ function ShowCartList(props) {
 
     let listOfProducts = [];
 
-    Object.values(JSON.parse(localStorage.getItem("myproducts"))).map(keyV => {
-        let elementAlrExists = false;
+    if(localStorage.getItem("myproducts") != null)
+        Object.values(JSON.parse(localStorage.getItem("myproducts"))).map(keyV => {
+            let elementAlrExists = false;
 
-        for (let index = 0; index < listOfProducts.length; index++) {
-            if (listOfProducts[index].title.includes(keyV.title)) {
-                listOfProducts[index] = { ...listOfProducts[index], quantity: listOfProducts[index].quantity + 1 }
+            for (let index = 0; index < listOfProducts.length; index++) {
+                if (listOfProducts[index].title.includes(keyV.title)) {
+                    listOfProducts[index] = { ...listOfProducts[index], quantity: listOfProducts[index].quantity + 1 }
+
+                    const dolarValue = productsTotal.totalDolar + parseFloat(keyV.price.replace('$', ''));
+                    productsTotal = { ...productsTotal, totalDolar: dolarValue}
+
+                    elementAlrExists = true;
+                }
+            }
+            if(!elementAlrExists){
+                listOfProducts.push({...keyV, quantity: 1})
 
                 const dolarValue = productsTotal.totalDolar + parseFloat(keyV.price.replace('$', ''));
                 productsTotal = { ...productsTotal, totalDolar: dolarValue}
-
-                elementAlrExists = true;
             }
-        }
-        if(!elementAlrExists){
-            listOfProducts.push({...keyV, quantity: 1})
+            productsTotal = { ...productsTotal, totalItens: productsTotal.totalItens + 1 }
 
-            const dolarValue = productsTotal.totalDolar + parseFloat(keyV.price.replace('$', ''));
-            productsTotal = { ...productsTotal, totalDolar: dolarValue}
-        }
-        productsTotal = { ...productsTotal, totalItens: productsTotal.totalItens + 1 }
-
-        return null
-    });
+            return null
+        });
 
     return (
         <>
