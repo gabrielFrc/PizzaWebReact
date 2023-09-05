@@ -8,21 +8,14 @@ import 'aos/dist/aos.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { SetMobile } from '../../features/events-control/eventsControlSlice';
 
-class linkButton {
-    constructor(routeId, name, img, redirect) {
-        this.routeId = routeId;
-        this.name = name;
-        this.img = img;
-        this.redirect = redirect;
-    }
-}
+import linkButton from '../../components/buttons-for-navigation/link-buttons';
 
 let buttonList = [];
 //process.env.PUBLIC_URL + '/navigation-images/user-profile-icon.png'
 buttonList.push(new linkButton('/login', <p>Account</p>, null, false))
 buttonList.push(new linkButton('/menu', <p>Menu</p>, null, true))
 buttonList.push(new linkButton('/', <p>Stores</p>, null, false))
-buttonList.push(new linkButton('/', <p>Promotions</p>, null, false))
+buttonList.push(new linkButton('/cart', <p>Promotions</p>, null, true))
 
 const LandingPage = () => {
     AOS.init();

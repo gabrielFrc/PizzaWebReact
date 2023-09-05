@@ -75,7 +75,7 @@ const Navigation = (props) => {
     }
 
     let lastHeight = useRef(0)
-    const [positive, setPositive] = useState(false)
+    const [positive, setPositive] = useState(true)
 
     useEffect(() => {
         const scrollHandle = () => {
