@@ -1,15 +1,29 @@
 import './index.css'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { AddProduct, RemoveProduct, ResetProducts } from '../../features/products-on-cart/productsCartSlice';
+
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function ShowCartList(props) {
     const dispatch = useDispatch();
 
-    let order = <button>Order all</button>
-    let noProduct = <button>See our products</button>
+    let nav = useNavigate();
+    const RedirectTo = (id) => {
+        nav(`/${id}`);
+    }
 
-    const { productsOnCart } = useSelector(state => state.productsOnCart);
+    let order = <button onClick={
+        () => RedirectTo('cart')
+    }>Order all</button>
+
+    let noProduct = <button onClick={
+        () => {
+            props.updateCart(false);
+        }
+    }>See our products</button>
+
+    // const { productsOnCart } = useSelector(state => state.productsOnCart);
 
     useEffect(() => {
         if(localStorage.getItem("myproducts") != null)
@@ -107,7 +121,7 @@ function ShowCartList(props) {
                     </div>
                 </div>
                 <div className='order-button'>
-                    {productsOnCart.length > 0 ? order : noProduct}
+                    {JSON.parse(localStorage.getItem("myproducts")).length > 0 ? order : noProduct}
                 </div>
             </div>
         </>
