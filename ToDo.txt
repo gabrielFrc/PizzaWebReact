@@ -2,7 +2,9 @@
 
 
 X Fazer o redux com localStorage sem gambiarras e manipular a API contando com quantidade de cada
-item.
+item mas não necessariamente preciso colocar quantidade no arquivo JSON já que isso faria
+quantidade fazer uma grande gambiarra atraves do JSON, quantidade tem que ser um valor 
+independente.
 
 * Only works one time, dont wokrs when resizing width screen !!!!!!!!!!!!!!!! (navigation)
 * passo 2 -> Troca de tela de mobile para desktop buga o navigation
