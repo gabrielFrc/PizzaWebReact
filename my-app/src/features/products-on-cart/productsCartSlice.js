@@ -7,13 +7,16 @@ export const slice = createSlice({
     },
     reducers: {
         AddProduct(state, {payload}){
+            var oldDate = new Date();
+            var newDate = oldDate.toDateString();
+
             if(localStorage.getItem("myproducts") != null)
                 localStorage.setItem("myproducts", JSON.stringify([
-                    ...JSON.parse(localStorage.getItem("myproducts")), payload
+                    ...JSON.parse(localStorage.getItem("myproducts")), {...payload, date: newDate}
                 ]));
             else{
                 localStorage.setItem("myproducts", JSON.stringify([
-                    payload
+                    {...payload, date: newDate, quantity: 1}
                 ]));
             }
             return{...state, productsOnCart: [...state.productsOnCart, payload]}

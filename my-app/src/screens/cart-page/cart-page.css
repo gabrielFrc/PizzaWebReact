@@ -7,11 +7,13 @@
     line-height: 150%; /* 24px */
 
     text-align: start;
+
+    word-wrap: break-word;
 }
 
 #cart-page-background{
     padding: 200px 0;
-    background-color: var(--white-color);
+    background-color: var(--one-color);
     min-height: 30vh;
     max-height: max-content;
 }
@@ -22,7 +24,7 @@
     margin: auto;
     border: 1px solid var(--Black, #000);
     border-radius: 3px;
-    background-color: white;
+    background-color: var(--white-color);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.148);
 }
 
@@ -78,12 +80,20 @@
 }
 
 .name-categorie{
-    width: 30vw;
+    width: 20vw;
+}
+
+.quantity-categorie{
+    width: 14vw;
+}
+
+.product{
     margin: 0 0 0 30px;
 }
 
 #table-itens ul{
     list-style-type: none;
+    margin: 0 0 10px 0;
     padding: 0;
 }
 #table-itens ul > hr:last-child{
@@ -93,7 +103,7 @@
 #table-itens li{
     display: flex;
 }
-#table-ites li p{
-    font-size: 16px;
-    font-weight: 500;
+#table-itens li p{
+    font-size: 14px;
+    font-weight: 300;
 }

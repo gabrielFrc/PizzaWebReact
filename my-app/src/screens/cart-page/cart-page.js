@@ -2,6 +2,7 @@ import Navigation from '../../components/navigation/navigation';
 import Footer from '../../components/footer';
 
 import './cart-page.css'
+import './cart-page-mobile.css'
 
 import linkButton from '../../components/buttons-for-navigation/link-buttons';
 
@@ -12,6 +13,10 @@ buttonList.push(new linkButton('/', <p>Stores</p>, null, false))
 buttonList.push(new linkButton('/menu', <p>Menu</p>, null, true))
 
 const CartPage = () => {
+    const products = JSON.parse(localStorage.getItem("myproducts"));
+    console.log(products)
+    let atualTitle = '';
+    
     return(
         <>
             <Navigation button={buttonList} darkMode={true} />
@@ -32,9 +37,9 @@ const CartPage = () => {
                         <hr></hr>
                         
                         <div id='table-categories'>
-                            <p className='name-categorie'>Name</p>
-                            <p>Id</p>
-                            <p>Date</p>
+                            <p className='name-categorie product'>Name</p>
+                            <p className='quantity-categorie product'>Qntd</p>
+                            <p className='product'>Date</p>
                             <span></span>
                         </div>
 
@@ -42,27 +47,42 @@ const CartPage = () => {
 
                         <div id='table-itens'>
                             <ul>
-                                <li>
-                                    <p className='name-categorie'>Pizza braba</p>
-                                    <p>blabla</p>
-                                    <p>blabla</p>
+                                {products.map((element, i) => {
+                                    if(element.title !== atualTitle){
+                                        atualTitle = element.title;
+                                        return <>
+                                            <li key={i}>
+                                                <p className='name-categorie product'>{element.title}</p>
+                                                <p className='quantity-categorie product'>{1}</p>
+                                                <p className='date-categorie product'>{element.date}</p>
+                                            </li>
+                                            <span></span>
+                                            <hr></hr>
+                                        </>
+                                    }
+                                    return null
+                                })}
+                                {/* <li>
+                                    <p className='name-categorie product'>Pizza de calabresa</p>
+                                    <p className='quantity-categorie product'>x3</p>
+                                    <p className='product'>blabla</p>
                                     <span></span>
                                 </li>
                                 <hr></hr>
                                 <li>
-                                    <p className='name-categorie'>Bebida brabona</p>
-                                    <p>blabla</p>
-                                    <p>blabla</p>
+                                    <p className='name-categorie product'>Coca cola</p>
+                                    <p className='quantity-categorie product'>x4</p>
+                                    <p className='product'>blabla</p>
                                     <span></span>
                                 </li>
                                 <hr></hr>
                                 <li>
-                                    <p className='name-categorie'>Pizza boladona</p>
-                                    <p>blabla</p>
-                                    <p>blabla</p>
+                                    <p className='name-categorie product'>Pizza de pepperoni</p>
+                                    <p className='quantity-categorie product'>x2</p>
+                                    <p className='product'>blabla</p>
                                     <span></span>
                                 </li>
-                                <hr></hr>
+                                <hr></hr> */}
                             </ul>
                         </div>
                     </div>

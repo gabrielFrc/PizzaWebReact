@@ -19,7 +19,7 @@ body{
     position: relative;
 }
 #content{
-    background-color: #292F36;
+    background-color: var(--one-color);
     padding: 50px 0;
     display: flex;
     flex-wrap: wrap;
@@ -35,22 +35,22 @@ body{
 .number-info h2{
     font-family: var(--first-font);
     font-size: 2.5em;
-    color: #FFF8F0;
+    color: var(--white-color);
     padding: 10px;
     border-radius: 15px 15px 0 0;
 }
 .number-info h4{
     font-family: var(--first-font);
-    color: #FFF8F0;
+    color: var(--white-color);
 }
 .number-info h4 span{
-    color: #F4D06F;
+    color: var(--three-color);
     text-decoration: underline solid;
 }
 .number-info h2 span{
     padding: 10px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: #FF8811;
+    background-color: var(--three-color);
     clip-path: circle(90.4% at 49% 100%);
 }
 .number-info h2::after{

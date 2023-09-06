@@ -1,0 +1,12 @@
+@media(max-width: 800px)
+{
+    #table-header{
+        flex-flow: column;
+    }
+    #buy-button button{
+        margin: 10px 0px 10px 0;
+        transition: all .5s;
+        font-family: var(--one-font);
+        font-weight: 500;
+    }
+}

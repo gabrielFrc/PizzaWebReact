@@ -74,7 +74,7 @@
     font-family: var(--one-font);
     font-size: 1.1em;
     font-weight: bold;
-    background-color: var(--three-color);
+    background-color: var(--four-color);
     text-align: center;
     min-width: 20px;
     padding: 10px;
@@ -94,7 +94,7 @@
     border-radius: 5px;
 }
 #button-add-remove button:hover{
-    background-color: var(--three-color);
+    background-color: var(--foour-color);
 }
 
 .cart-div > img{
@@ -110,7 +110,7 @@
     border-radius: 3px;
     border: 2px solid black;
     padding: 10px;
-    background-color: var(--three-color);
+    background-color: var(--four-color);
     color: black;
     margin: 50px auto;
     font-weight: bold;

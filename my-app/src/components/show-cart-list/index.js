@@ -102,12 +102,10 @@ function ShowCartList(props) {
                                         </div>
                                         <div id='button-add-remove'>
                                             <button onClick={ () => {
-                                                    delete el.quantity
                                                     dispatch(AddProduct(el))
                                                 }}>+</button>
                                             <p id='product-quantity'>{el.quantity}</p>
                                             <button onClick={() => {
-                                                delete el.quantity;
                                                 dispatch(RemoveProduct(el))
                                             }}>-</button>
                                         </div>
@@ -121,7 +119,7 @@ function ShowCartList(props) {
                     </div>
                 </div>
                 <div className='order-button'>
-                    {JSON.parse(localStorage.getItem("myproducts")).length > 0 ? order : noProduct}
+                    { localStorage.getItem("myproducts") != null && JSON.parse(localStorage.getItem("myproducts")).length > 0 ? order : noProduct}
                 </div>
             </div>
         </>
