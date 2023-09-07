@@ -69,7 +69,6 @@ const InputFieldComponent = ({setFilter}) => {
             }
         }).map((element) => {
             const button = <button onClick={() => {
-                console.log('Clicked on me, my value is: ' + element)
                 document.getElementById('input-filter').value = element;
                 setFilter(element)
 

@@ -60,18 +60,26 @@ body{
 .number-info #n01::after{
     content: ' Why us';
     text-shadow: 0 0;
+    word-break: break-all;
+    line-height: 60px;
 }
 .number-info #n02::after{
     content: ' What are made of';
     text-shadow: 0 0;
+    word-break: break-all;
+    line-height: 60px;
 }
 .number-info #n03::after{
     content: ' Where are us';
     text-shadow: 0 0;
+    word-break: break-all;
+    line-height: 60px;
 }
 .number-info #n04::after{
     content: ' Recommendation';
     text-shadow: 0 0;
+    word-break: break-all;
+    line-height: 60px;
 }
 #motivation{
     color: #FFF8F0;
@@ -167,6 +175,11 @@ body{
     .banner-landing .inside-video{
         margin: 0 auto;
     }
+    
+    .banner-landing{
+        height: 85vh;
+    }
+
     .inside-banner h1{
         padding-top: 300px;
     }

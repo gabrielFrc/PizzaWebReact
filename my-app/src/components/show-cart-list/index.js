@@ -46,11 +46,7 @@ function ShowCartList(props) {
                         props.updateCart(false)
                     }}></img>
                 </div>
-                <div style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    margin: "0 40px"
-                }}>
+                <div id='cart-header'>
                     <h1 style={{ lineHeight: '25px' }}>Your Cart</h1>
                     <h2 style={{ lineHeight: '25px' }}>Items: {productsTotal.totalItens}</h2>
                 </div>
@@ -61,7 +57,7 @@ function ShowCartList(props) {
                             <div>{productsOnCart.map(el => {
                                 return (
                                     <div id='product-container' key={el.title}>
-                                        <div id='image-title' style={{display: 'flex'}}>
+                                        <div id='image-title'>
                                             <img src={el.image_url}
                                                 alt='product'
                                                 width={100}
@@ -72,19 +68,21 @@ function ShowCartList(props) {
                                                 {/* <p>{el.description}</p> */}
                                             </h3>
                                         </div>
-                                        <div id='product-price'>
-                                            <h4>{'$' + parseFloat(el.price.replace('$', '') * el.quantity).toFixed(2)}</h4>
-                                        </div>
-                                        <div id='button-add-remove'>
-                                            <button onClick={ () => {
-                                                    dispatch(AddProduct(el))
+                                        <div id='button-price'>
+                                            <div id='product-price'>
+                                                <h4>{'$' + parseFloat(el.price.replace('$', '') * el.quantity).toFixed(2)}</h4>
+                                            </div>
+                                            <div id='button-add-remove'>
+                                                <button onClick={ () => {
+                                                        dispatch(AddProduct(el))
+                                                        SetLocalStorageProducts()
+                                                    }}>+</button>
+                                                <p id='product-quantity'>{el.quantity}</p>
+                                                <button onClick={() => {
+                                                    dispatch(RemoveProduct(el))
                                                     SetLocalStorageProducts()
-                                                }}>+</button>
-                                            <p id='product-quantity'>{el.quantity}</p>
-                                            <button onClick={() => {
-                                                dispatch(RemoveProduct(el))
-                                                SetLocalStorageProducts()
-                                            }}>-</button>
+                                                }}>-</button>
+                                            </div>
                                         </div>
                                     </div>
                                 )

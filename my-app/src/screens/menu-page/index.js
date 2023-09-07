@@ -36,7 +36,7 @@ const Menu = () => {
             <Navigation button={buttonList} darkMode={true} windowHeight={-50} showCategories={true}/>
             <main id='menu-main'>
                 <div className="upper-menu">
-                    <h1 id='menu-title'>Menu</h1>
+                    <h1 id='menu-title'>Our food</h1>
                     <FilterInput setFilter={setFilter}/>
                 </div>
                 <MenuOptions filter={filter}/>

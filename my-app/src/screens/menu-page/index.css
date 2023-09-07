@@ -8,15 +8,15 @@
 
 .upper-menu{
     display: flex;
-    justify-content: space-between;
+    flex-flow: column;
 }
 .upper-menu h1{
-    text-align: start;
-    margin-left: 90px;
+    text-align: center;
     font-family: var(--three-font);
     font-weight: 700;
-    font-size: 2.5em;
+    font-size: 4.5em;
     color: var(--white-color);
+    text-shadow: 5px 5px black;
 }
 
 .food-category{
@@ -59,12 +59,5 @@
 
     .food-container{
         min-width: 55vw;
-    }
-
-    .upper-menu h1{
-        margin-left: 45px;
-    }
-    .upper-menu .input-field{
-        margin-right: 45px;
     }
 }
