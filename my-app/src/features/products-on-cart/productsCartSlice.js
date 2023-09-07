@@ -7,39 +7,49 @@ export const slice = createSlice({
     },
     reducers: {
         AddProduct(state, {payload}){
-            var oldDate = new Date();
-            var newDate = oldDate.toDateString();
+            var oldDate = new Date().toDateString();
+            let myNewState = {};
 
-            if(localStorage.getItem("myproducts") != null)
-                localStorage.setItem("myproducts", JSON.stringify([
-                    ...JSON.parse(localStorage.getItem("myproducts")), {...payload, date: newDate}
-                ]));
-            else{
-                localStorage.setItem("myproducts", JSON.stringify([
-                    {...payload, date: newDate, quantity: 1}
-                ]));
+            let repeatedProduct = false;
+            if(state.productsOnCart.length > 0){
+                state.productsOnCart.forEach(element => {
+                    if(payload.title === element.title){
+                        if('quantity' in element){
+                            element.quantity ++;
+                            element.date = oldDate;
+
+                            repeatedProduct = true;
+                            return;
+                        }
+                    }
+                });
+                if(!repeatedProduct){
+                    myNewState = {...state, productsOnCart: [...state.productsOnCart, {...payload, quantity: 1, date: oldDate}]}
+                    return myNewState;
+                }
+            }else{
+                myNewState = {...state, productsOnCart: [...state.productsOnCart, {...payload, quantity: 1, date: oldDate}]}
+                return myNewState;
             }
-            return{...state, productsOnCart: [...state.productsOnCart, payload]}
         },
         ResetProducts(state, {payload}){
-            return{...state, productsOnCart: [payload]}
+            return{...state, productsOnCart: payload}
+            // return{...state, productsOnCart: [payload]}
         },
         RemoveProduct(state, {payload}){
-            let productNotFound = true;
-
-            const newLocal = JSON.parse(localStorage.getItem("myproducts")).filter((v) => {
-                if(v.title === payload.title && productNotFound){
-                    productNotFound = false;
-                    return false;
+            state.productsOnCart.forEach(element => {
+                if(payload.title === element.title){
+                    element.quantity --;
+                    
+                    if(element.quantity <= 0){
+                        state.productsOnCart.forEach((v)=>{
+                            if(v.quantity <= 0){
+                                state.productsOnCart.splice(state.productsOnCart.indexOf(v), 1)
+                            }
+                        })
+                    }
                 }
-                return true;
             });
-
-            localStorage.setItem("myproducts", JSON.stringify(
-                newLocal
-            ));
-
-            return{...state, productsOnCart: [...newLocal]}
         }
     }
 });

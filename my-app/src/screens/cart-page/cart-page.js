@@ -5,6 +5,7 @@ import './cart-page.css'
 import './cart-page-mobile.css'
 
 import linkButton from '../../components/buttons-for-navigation/link-buttons';
+import { Fragment } from 'react';
 
 let buttonList = [];
 //process.env.PUBLIC_URL + '/navigation-images/user-profile-icon.png'
@@ -14,7 +15,6 @@ buttonList.push(new linkButton('/menu', <p>Menu</p>, null, true))
 
 const CartPage = () => {
     const products = JSON.parse(localStorage.getItem("myproducts"));
-    console.log(products)
     let atualTitle = '';
     
     return(
@@ -30,7 +30,7 @@ const CartPage = () => {
                                 <h4>Espero que esteja satisfeito!</h4>
                             </div>
                             <div id='buy-button'>
-                                <button>Compre</button>
+                                <button>Logue para comprar</button>
                             </div>
                         </div>
 
@@ -47,18 +47,18 @@ const CartPage = () => {
 
                         <div id='table-itens'>
                             <ul>
-                                {products.map((element, i) => {
+                                {products != null && products.map((element, i) => {
                                     if(element.title !== atualTitle){
                                         atualTitle = element.title;
-                                        return <>
-                                            <li key={i}>
+                                        return <Fragment key={i}>
+                                            <li>
                                                 <p className='name-categorie product'>{element.title}</p>
-                                                <p className='quantity-categorie product'>{1}</p>
+                                                <p className='quantity-categorie product'>{element.quantity}</p>
                                                 <p className='date-categorie product'>{element.date}</p>
+                                                <span></span>
                                             </li>
-                                            <span></span>
                                             <hr></hr>
-                                        </>
+                                        </Fragment>
                                     }
                                     return null
                                 })}

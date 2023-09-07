@@ -12,17 +12,16 @@
 }
 
 #cart-page-background{
-    padding: 200px 0;
     background-color: var(--one-color);
     min-height: 30vh;
     max-height: max-content;
 }
 
 #products-table{
+    padding: 200px 0;
     max-height: max-content;
-    width: 80vw;
-    margin: auto;
-    border: 1px solid var(--Black, #000);
+    width: 100%;
+    margin: auto 0;
     border-radius: 3px;
     background-color: var(--white-color);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.148);
@@ -35,7 +34,7 @@
 
 #table-header-infos{
     text-align: start;
-    margin: 20px 0 20px 20px;
+    margin: 30px 0 30px 30px;
 }
 
 #table-header-infos > h2, h4{
@@ -64,7 +63,7 @@
     padding: 0 25px;
     height: 40px;
     border-radius: 5px;
-    margin: 40px 20px 40px 0;
+    margin: 40px 30px 40px 0;
     transition: all .5s;
     font-family: var(--one-font);
     font-weight: 500;
@@ -95,9 +94,6 @@
     list-style-type: none;
     margin: 0 0 10px 0;
     padding: 0;
-}
-#table-itens ul > hr:last-child{
-    display: none;
 }
 
 #table-itens li{

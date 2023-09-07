@@ -28,8 +28,13 @@ const Navigation = (props) => {
     const { productsOnCart } = useSelector(state => state.productsOnCart)
 
     useEffect(() => {
-        if(localStorage.getItem("myproducts") != null)
-            setCart((prevCart) => ({ ...prevCart, cartQuantity : JSON.parse(localStorage.getItem("myproducts")).length }))
+        if(localStorage.getItem("myproducts") != null){
+            let totalItens = 0;
+            productsOnCart.forEach(element => {
+                totalItens += element.quantity;
+            });
+            setCart((prevCart) => ({ ...prevCart, cartQuantity : totalItens}))
+        }
     }, [productsOnCart])
 
     const updateCart = (newValue) => {
@@ -160,7 +165,6 @@ const Navigation = (props) => {
                         { mobile && <Menu />}
                     </nav>
                     {props.extraNav != null ? <>{props.extraNav}</> : null}
-                    {!props.darkMode ? null : <hr id='navigation-hr'/>}
                 </header>
              }
             

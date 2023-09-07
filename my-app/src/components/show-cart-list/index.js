@@ -1,9 +1,10 @@
 import './index.css'
-import { useDispatch } from 'react-redux'
-import { AddProduct, RemoveProduct, ResetProducts } from '../../features/products-on-cart/productsCartSlice';
+import { useDispatch, useSelector } from 'react-redux'
+import { AddProduct, RemoveProduct } from '../../features/products-on-cart/productsCartSlice';
 
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import SetLocalStorageProducts from '../../screens/menu-page/menu-options/localStorage-products';
 
 function ShowCartList(props) {
     const dispatch = useDispatch();
@@ -23,12 +24,7 @@ function ShowCartList(props) {
         }
     }>See our products</button>
 
-    // const { productsOnCart } = useSelector(state => state.productsOnCart);
-
-    useEffect(() => {
-        if(localStorage.getItem("myproducts") != null)
-            dispatch(ResetProducts(JSON.parse(localStorage.getItem("myproducts"))))
-    }, [dispatch])
+    const { productsOnCart } = useSelector(state => state.productsOnCart);
 
     let productsTotal = {
         totalItens: 0,
@@ -36,31 +32,10 @@ function ShowCartList(props) {
     }
     
 
-    let listOfProducts = [];
-
     if(localStorage.getItem("myproducts") != null)
-        Object.values(JSON.parse(localStorage.getItem("myproducts"))).map(keyV => {
-            let elementAlrExists = false;
-
-            for (let index = 0; index < listOfProducts.length; index++) {
-                if (listOfProducts[index].title.includes(keyV.title)) {
-                    listOfProducts[index] = { ...listOfProducts[index], quantity: listOfProducts[index].quantity + 1 }
-
-                    const dolarValue = productsTotal.totalDolar + parseFloat(keyV.price.replace('$', ''));
-                    productsTotal = { ...productsTotal, totalDolar: dolarValue}
-
-                    elementAlrExists = true;
-                }
-            }
-            if(!elementAlrExists){
-                listOfProducts.push({...keyV, quantity: 1})
-
-                const dolarValue = productsTotal.totalDolar + parseFloat(keyV.price.replace('$', ''));
-                productsTotal = { ...productsTotal, totalDolar: dolarValue}
-            }
-            productsTotal = { ...productsTotal, totalItens: productsTotal.totalItens + 1 }
-
-            return null
+        productsOnCart.forEach(element => {
+            productsTotal.totalItens += element.quantity;
+            productsTotal.totalDolar += element.quantity * parseFloat(element.price.replace('$', ''));
         });
 
     return (
@@ -82,8 +57,8 @@ function ShowCartList(props) {
                 <hr />
                 <div className='list-of-pizzas'>
                     {
-                        listOfProducts.length > 0 ?
-                            <div>{listOfProducts.map(el => {
+                        productsOnCart.length > 0 ?
+                            <div>{productsOnCart.map(el => {
                                 return (
                                     <div id='product-container' key={el.title}>
                                         <div id='image-title' style={{display: 'flex'}}>
@@ -103,10 +78,12 @@ function ShowCartList(props) {
                                         <div id='button-add-remove'>
                                             <button onClick={ () => {
                                                     dispatch(AddProduct(el))
+                                                    SetLocalStorageProducts()
                                                 }}>+</button>
                                             <p id='product-quantity'>{el.quantity}</p>
                                             <button onClick={() => {
                                                 dispatch(RemoveProduct(el))
+                                                SetLocalStorageProducts()
                                             }}>-</button>
                                         </div>
                                     </div>

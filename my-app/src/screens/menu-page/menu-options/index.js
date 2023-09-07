@@ -3,6 +3,8 @@ import './index.css'
 import { useDispatch } from 'react-redux';
 import { AddProduct } from '../../../features/products-on-cart/productsCartSlice';
 
+import SetLocalStorageProducts from './localStorage-products';
+
 const MenuOptions = (props) => {
     const dispatch = useDispatch();
     
@@ -49,6 +51,7 @@ const MenuOptions = (props) => {
                                     <h4>{element.price}</h4>
                                     <button onClick={() => {
                                         dispatch(AddProduct(element))
+                                        SetLocalStorageProducts()
                                     }}>Add To Cart</button>
                                 </div>
                             </div>
