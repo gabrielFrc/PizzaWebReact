@@ -26,6 +26,10 @@
     background-color: var(--white-color);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.148);
 }
+#products-table hr{
+    border-color: rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
 
 #table-header{
     display: flex;
@@ -76,6 +80,7 @@
 
 #tap-to-view{
     text-align: start;
+    margin-bottom: 5px;
 }
 #tap-to-view span{
     margin-left: 30px;
@@ -86,6 +91,7 @@
 
 #table-categories{
     display: flex;
+    font-size: large;
 }
 
 .name-categorie{
@@ -103,8 +109,11 @@
     width: 25vw;
 }
 
-.product{
-    margin: 0 0 0 30px;
+.product, .name-categorie, .quantity-categorie, .date-categorie{
+    margin: 6px 0 6px 30px;
+}
+.larger-product{
+    padding: 15px 0;
 }
 
 #table-itens ul{
@@ -116,8 +125,19 @@
 #table-itens li{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+}
+#table-itens li:hover{
+    background-color: rgba(0, 0, 0, 0.03);
 }
 #table-itens li p{
     font-size: 14px;
     font-weight: 300;
+}
+
+#view-product{
+    background-image: linear-gradient(var(--two-color), var(--one-color));
+    padding: 6px 6px 6px 6px;
+    margin: 10px 0;
+    width: 20vw;
 }

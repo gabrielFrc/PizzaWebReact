@@ -5,7 +5,8 @@ import './cart-page.css'
 import './cart-page-mobile.css'
 
 import linkButton from '../../components/buttons-for-navigation/link-buttons';
-import { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 let buttonList = [];
 //process.env.PUBLIC_URL + '/navigation-images/user-profile-icon.png'
@@ -17,9 +18,24 @@ const CartPage = () => {
     const products = JSON.parse(localStorage.getItem("myproducts"));
     let atualTitle = '';
     
+    const [viewImage, setViewImage] = useState({
+        element: null,
+        image: '',
+        show: false,
+    });
+    
+    const myNewImage = <img 
+            src={viewImage.image}
+            alt='product'
+            id='view-product'>
+        </img>
+    
     return(
         <>
             <Navigation button={buttonList} darkMode={true} />
+
+            
+            { (viewImage.element != null && viewImage.show) && createPortal(myNewImage, viewImage.element) }
 
             <main id='cart-page-main'>
                 <section id='cart-page-background'>
@@ -42,9 +58,9 @@ const CartPage = () => {
                         <hr></hr>
                         
                         <div id='table-categories'>
-                            <p className='name-categorie product'>Name</p>
-                            <p className='quantity-categorie-number quantity-categorie product'></p>
-                            <p className='date-categorie product'>Date</p>
+                            <p className='name-categorie'>Name</p>
+                            <p className='quantity-categorie-number quantity-categorie'></p>
+                            <p className='date-categorie'>Date</p>
                         </div>
 
                         <hr></hr>
@@ -55,7 +71,11 @@ const CartPage = () => {
                                     if(element.title !== atualTitle){
                                         atualTitle = element.title;
                                         return <Fragment key={i}>
-                                            <li>
+                                            <li onClick={(e) => { 
+                                                    const isEqual = (e.currentTarget === viewImage.element) && viewImage.show;
+
+                                                    setViewImage({element: e.currentTarget, image: element.image_url, show: !isEqual}) 
+                                                    } }>
                                                 <p className='name-categorie product'>{element.title}</p>
                                                 <p className='quantity-categorie product'>{element.quantity}</p>
                                                 <p className='date-categorie product'>{element.date}</p>
@@ -65,27 +85,6 @@ const CartPage = () => {
                                     }
                                     return null
                                 })}
-                                {/* <li>
-                                    <p className='name-categorie product'>Pizza de calabresa</p>
-                                    <p className='quantity-categorie product'>x3</p>
-                                    <p className='product'>blabla</p>
-                                    <span></span>
-                                </li>
-                                <hr></hr>
-                                <li>
-                                    <p className='name-categorie product'>Coca cola</p>
-                                    <p className='quantity-categorie product'>x4</p>
-                                    <p className='product'>blabla</p>
-                                    <span></span>
-                                </li>
-                                <hr></hr>
-                                <li>
-                                    <p className='name-categorie product'>Pizza de pepperoni</p>
-                                    <p className='quantity-categorie product'>x2</p>
-                                    <p className='product'>blabla</p>
-                                    <span></span>
-                                </li>
-                                <hr></hr> */}
                             </ul>
                         </div>
                     </div>

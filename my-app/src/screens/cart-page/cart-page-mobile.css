@@ -13,4 +13,9 @@
     .quantity-categorie-number::after{
         content: 'Qnt';
     }
+
+    #view-product{
+        width: 40vw;
+        margin: 10px auto;
+    }
 }
