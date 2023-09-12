@@ -9,4 +9,8 @@
         font-family: var(--one-font);
         font-weight: 500;
     }
+
+    .quantity-categorie-number::after{
+        content: 'Qnt';
+    }
 }

@@ -42,7 +42,7 @@ function ShowCartList(props) {
         <>
             <div className='cart-div'>
                 <div className='close-menu'>
-                    <img src={process.env.PUBLIC_URL + '/navigation-images/close-icon.png'} alt='close icon' onClick={() => {
+                    <img src={process.env.PUBLIC_URL + '/images/navigation-images/close-icon.png'} alt='close icon' onClick={() => {
                         props.updateCart(false)
                     }}></img>
                 </div>

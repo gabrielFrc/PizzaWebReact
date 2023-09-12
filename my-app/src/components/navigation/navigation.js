@@ -118,7 +118,7 @@ const Navigation = (props) => {
                             <figure className='figure-logo'>
                                 <img style={props.darkMode ? {filter: "grayscale(100%)"} : null} 
                                     className={`logo-img`} 
-                                    src={process.env.PUBLIC_URL + '/navigation-images/logo.png'} 
+                                    src={process.env.PUBLIC_URL + '/images/navigation-images/logo.png'} 
                                     alt='Site Logo' 
                                     onClick={() => directTo('/')}>
 

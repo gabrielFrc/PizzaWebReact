@@ -14,7 +14,7 @@ const Menu = () =>{
 
     return(
         <div className='menu'>
-            <img style={showMenu ? null : invertColor} src={process.env.PUBLIC_URL + '/navigation-images/menu_icon.png'} alt='menu icon' onClick={() => {
+            <img style={showMenu ? null : invertColor} src={process.env.PUBLIC_URL + '/images/navigation-images/menu_icon.png'} alt='menu icon' onClick={() => {
                 const element = document.querySelector('.sub-nav');
                 const nav = document.getElementById('nav');
                 

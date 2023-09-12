@@ -74,6 +74,16 @@
     font-size: 1rem;
 }
 
+#tap-to-view{
+    text-align: start;
+}
+#tap-to-view span{
+    margin-left: 30px;
+    font-family: var(--one-font);
+    font-weight: 300;
+    font-size: smaller;
+}
+
 #table-categories{
     display: flex;
 }
@@ -84,6 +94,13 @@
 
 .quantity-categorie{
     width: 14vw;
+}
+.quantity-categorie-number::after{
+    content: 'Quantity';
+}
+
+.date-categorie{
+    width: 25vw;
 }
 
 .product{
@@ -98,6 +115,7 @@
 
 #table-itens li{
     display: flex;
+    align-items: center;
 }
 #table-itens li p{
     font-size: 14px;

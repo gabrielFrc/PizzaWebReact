@@ -44,10 +44,10 @@ const LandingPage = () => {
             <Nav button={buttonList} windowHeight={-50} darkMode={true} showCategories={false} />
             <main>
                 <div className='banner-landing'
-                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/main-images/princ-bg.png"})` }}>
+                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/images/main-images/princ-bg.webp"})` }}>
                     <div className='inside-banner'>
                         <h1>Pizza Project</h1>
-                        <img id='start-banner' src={process.env.PUBLIC_URL + "/main-images/pizza-banner.png"}
+                        <img id='start-banner' src={process.env.PUBLIC_URL + "/images/main-images/pizza-banner.png"}
                             alt='pizza banner'>
                         </img>
                     </div>
@@ -80,9 +80,9 @@ const LandingPage = () => {
                     </i></h4>
                 </div>
                 <div className='banner-landing'
-                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/main-images/princ-bg.png"})` }}>
+                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/images/main-images/princ-bg.webp"})` }}>
                     <div className='inside-banner'>
-                        <img id='end-banner' src={process.env.PUBLIC_URL + "/main-images/pizza-banner-end.png"}
+                        <img id='end-banner' src={process.env.PUBLIC_URL + "/images/main-images/pizza-banner-end.png"}
                             alt='pizza banner'>
                         </img>
                     </div>

@@ -3,7 +3,7 @@
     height: 30px;
     position: relative;
 }
-input{
+#input-filter{
     height: 25px;
     border: none;
     border-radius: 5px 5px 0 0;
@@ -13,7 +13,7 @@ input{
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
     z-index: 2;
 }
-input:focus{
+#input-filter:focus{
     outline: none;
     border-top: 1.5px solid black;
     border-left: 1.5px solid black;

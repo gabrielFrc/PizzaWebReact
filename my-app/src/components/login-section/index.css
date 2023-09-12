@@ -28,14 +28,17 @@ figure{
 }
 .input-label label{
     display: block;
-    margin: 5px 0;
+    margin: 5px auto;
+    width: max-content;
 }
 .input-label label input{
     width: 200px;
     height: 30px;
 }
-.input-label .submit-button input{
+.input-label .submit-button{
     margin-top: 30px;
+}
+.input-label .submit-button input{
     width: 105px;
     background-color: red;
     border-radius: 3px;

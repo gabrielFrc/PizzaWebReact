@@ -87,7 +87,7 @@ const InputFieldComponent = ({setFilter}) => {
                         setTag(e.currentTarget.value)
                         setFocus(true);
                     }} />
-                <img src={process.env.PUBLIC_URL + '/main-images/lupa-icon.png'}
+                <img src={process.env.PUBLIC_URL + '/images/main-images/lupa-icon.png'}
                     alt='lupa icon'
                     onClick={() => {
                         setFilter(tag);

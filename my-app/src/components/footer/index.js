@@ -2,18 +2,20 @@ import './index.css';
 import React from 'react';
 
 class footerLinks{
-    constructor(linkName, url, id){
+    constructor(linkName, url, id, newWindow){
         this.linkName = linkName;
         this.url = url;
         this.id = id;
+        this.newWindow = newWindow;
     }
 }
 
 let footerLinksArray = [];
-footerLinksArray.push(new footerLinks('Sobre a pizza', '#', footerLinksArray.length));
-footerLinksArray.push(new footerLinks('Quem somos', '#', footerLinksArray.length));
-footerLinksArray.push(new footerLinks('Termos', '#', footerLinksArray.length));
-footerLinksArray.push(new footerLinks('API', '#', footerLinksArray.length))
+footerLinksArray.push(new footerLinks('Sobre a pizza', '#', footerLinksArray.length, false));
+footerLinksArray.push(new footerLinks('Quem somos', '#', footerLinksArray.length, false));
+footerLinksArray.push(new footerLinks('Termos', '#', footerLinksArray.length, false));
+footerLinksArray.push(new footerLinks('API', '#', footerLinksArray.length, false));
+footerLinksArray.push(new footerLinks('Icons8', 'https://icons8.com', footerLinksArray.length, true));
 
 const Footer = () => {
     return(
@@ -23,7 +25,9 @@ const Footer = () => {
                     {footerLinksArray.map((element, i) => {
                         return <React.Fragment key={i}>
                             <li>
-                                <a href={element.url}>
+                                <a href={element.url}
+                                    target='_blank'
+                                    rel='noreferrer'>
                                     {element.linkName}
                                 </a>
                             </li>
@@ -44,7 +48,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className='partner-logo'>
-                        <img src={process.env.PUBLIC_URL + '/footer-images/pepsi-logo.png'}
+                        <img src={process.env.PUBLIC_URL + '/images/footer-images/pepsi-logo.png'}
                             alt='pepsi logo'>
                         </img>
                     </div>

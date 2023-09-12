@@ -5,7 +5,7 @@ const LoginSection = (props) => {
         <>
             <div className='container'>
                 <figure className='close-icon'>
-                    <img src={process.env.PUBLIC_URL + '/navigation-images/close-icon.png'} alt='close login' onClick={() => {
+                    <img src={process.env.PUBLIC_URL + '/images/navigation-images/close-icon.png'} alt='close login' onClick={() => {
                         props.setLogin(false);
                     }}></img>
                 </figure>

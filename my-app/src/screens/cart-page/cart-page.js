@@ -33,14 +33,18 @@ const CartPage = () => {
                                 <button>Logue para comprar</button>
                             </div>
                         </div>
+                        <div id='tap-to-view'>
+                                <span>
+                                    <i>Tap to view</i>
+                                </span>
+                        </div>
 
                         <hr></hr>
                         
                         <div id='table-categories'>
                             <p className='name-categorie product'>Name</p>
-                            <p className='quantity-categorie product'>Qntd</p>
-                            <p className='product'>Date</p>
-                            <span></span>
+                            <p className='quantity-categorie-number quantity-categorie product'></p>
+                            <p className='date-categorie product'>Date</p>
                         </div>
 
                         <hr></hr>
@@ -55,7 +59,6 @@ const CartPage = () => {
                                                 <p className='name-categorie product'>{element.title}</p>
                                                 <p className='quantity-categorie product'>{element.quantity}</p>
                                                 <p className='date-categorie product'>{element.date}</p>
-                                                <span></span>
                                             </li>
                                             <hr></hr>
                                         </Fragment>
