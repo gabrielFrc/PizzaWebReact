@@ -1,6 +1,6 @@
 import './index.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { AddProduct, RemoveProduct } from '../../features/products-on-cart/productsCartSlice';
+import { AddProduct, RemoveProduct, ClearProducts } from '../../features/products-on-cart/productsCartSlice';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -93,8 +93,19 @@ function ShowCartList(props) {
                         <h3>{`Value total: ${'$' + productsTotal.totalDolar.toFixed(2)}`}</h3>
                     </div>
                 </div>
-                <div className='order-button'>
-                    { localStorage.getItem("myproducts") != null && JSON.parse(localStorage.getItem("myproducts")).length > 0 ? order : noProduct}
+                <div id='clean-and-order'>
+                    <div className='order-button'>
+                        { localStorage.getItem("myproducts") != null && JSON.parse(localStorage.getItem("myproducts")).length > 0 ? order : noProduct}
+                    </div>
+                    <div id='clear-itens'
+                        onClick={() => {
+                            dispatch(ClearProducts())
+                            SetLocalStorageProducts()
+                        }}>
+                        <p>Clean <img src={process.env.PUBLIC_URL + '/images/menu-images/lixeira-icon.png'}
+                                alt='lixeira icon'>
+                            </img></p>
+                    </div>
                 </div>
             </div>
         </>

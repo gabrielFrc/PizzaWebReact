@@ -35,12 +35,14 @@ const CartPage = () => {
         </img>
     
     const verifyNextPage = (next) => {
-        if(next && currentPage !== pages){
-            setCurrentPage(currentPage + 1);
-            setViewImage({...viewImage, show: false});
-        }else if(!next && currentPage !== 1){
-            setCurrentPage(currentPage - 1);
-            setViewImage({...viewImage, show: false});
+        if(pages > 0){
+            if(next && currentPage !== pages){
+                setCurrentPage(currentPage + 1);
+                setViewImage({...viewImage, show: false});
+            }else if(!next && currentPage !== 1){
+                setCurrentPage(currentPage - 1);
+                setViewImage({...viewImage, show: false});
+            }
         }
     }
 

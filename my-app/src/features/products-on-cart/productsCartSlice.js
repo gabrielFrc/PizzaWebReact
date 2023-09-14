@@ -36,6 +36,9 @@ export const slice = createSlice({
             return{...state, productsOnCart: payload}
             // return{...state, productsOnCart: [payload]}
         },
+        ClearProducts(state){
+            return{...state, productsOnCart: []}
+        },
         RemoveProduct(state, {payload}){
             state.productsOnCart.forEach(element => {
                 if(payload.title === element.title){
@@ -54,6 +57,6 @@ export const slice = createSlice({
     }
 });
 
-export const { AddProduct, RemoveProduct, ResetProducts } = slice.actions;
+export const { AddProduct, RemoveProduct, ResetProducts, ClearProducts } = slice.actions;
 
 export default slice.reducer;

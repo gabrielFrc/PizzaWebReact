@@ -113,18 +113,45 @@
 }
 
 #total-value{
-    margin: 50px 10% 0 auto;
-    text-align: end;
+    /* margin: 50px 10% 0 auto;
+    text-align: end; */
+}
+
+#clean-and-order{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .order-button button{
+    width: 90px;
     border-radius: 3px;
     border: 2px solid black;
     padding: 10px;
-    background-color: var(--four-color);
-    color: black;
+    background-color: var(--two-color);
+    color: var(--white-color);
     margin: 50px auto;
     font-weight: bold;
+}
+
+#clear-itens{
+    margin: auto 0;
+}
+
+#clear-itens p{
+    margin: auto 0;
+    font-family: var(--one-font);
+    font-weight: bold;
+    color: black;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+    cursor: pointer;
+}
+#clear-itens img{
+    margin: auto 0;
+    width: 20px;
+    height: 20px;
 }
 
 @media(max-width: 1140px){

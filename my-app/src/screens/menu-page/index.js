@@ -14,7 +14,7 @@ let buttonList = [];
 //process.env.PUBLIC_URL + '/navigation-images/user-profile-icon.png'
 buttonList.push(new linkButton('/login', <p>Account</p>, null, false))
 buttonList.push(new linkButton('/', <p>Stores</p>, null, false))
-buttonList.push(new linkButton('/cart', <p>Promotions</p>, null, true))
+buttonList.push(new linkButton('/', <p>Promotions</p>, null, false))
 
 const Menu = () => {
     const [ filter, setFilter ] = useState('')
