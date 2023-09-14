@@ -17,6 +17,10 @@ buttonList.push(new linkButton('/menu', <p>Menu</p>, null, true))
 const CartPage = () => {
     const products = JSON.parse(localStorage.getItem("myproducts"));
     let atualTitle = '';
+
+    const limitPerPage = 5;
+    const pages = Math.ceil(products.length / limitPerPage);
+    const [currentPage, setCurrentPage] = useState(1);
     
     const [viewImage, setViewImage] = useState({
         element: null,
@@ -30,6 +34,18 @@ const CartPage = () => {
             id='view-product'>
         </img>
     
+    const verifyNextPage = (next) => {
+        if(next && currentPage !== pages){
+            setCurrentPage(currentPage + 1);
+            setViewImage({...viewImage, show: false});
+        }else if(!next && currentPage !== 1){
+            setCurrentPage(currentPage - 1);
+            setViewImage({...viewImage, show: false});
+        }
+    }
+
+    let slicing = products.slice((currentPage * limitPerPage)-limitPerPage, currentPage * limitPerPage)
+
     return(
         <>
             <Navigation button={buttonList} darkMode={true} />
@@ -67,7 +83,8 @@ const CartPage = () => {
 
                         <div id='table-itens'>
                             <ul>
-                                {products != null && products.map((element, i) => {
+                                {
+                                products != null && slicing.map((element, i) => {
                                     if(element.title !== atualTitle){
                                         atualTitle = element.title;
                                         return <Fragment key={i}>
@@ -86,6 +103,19 @@ const CartPage = () => {
                                     return null
                                 })}
                             </ul>
+                        </div>
+                        <div id='table-page'>
+                            <button onClick={
+                                () => {verifyNextPage(false)}
+                            }>
+                                {'<'}
+                            </button>
+                            <span>{currentPage}</span>
+                            <button onClick={
+                                () => {verifyNextPage(true)}
+                            }>
+                                {'>'}
+                            </button>
                         </div>
                     </div>
                 </section>

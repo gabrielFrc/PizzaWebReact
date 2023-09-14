@@ -45,7 +45,7 @@
             "title": "Sicilian Pizza",
             "description": "Thick crust pizza with tomato sauce and mozzarella cheese. Toppings can include pepperoni or sausage.",
             "price": "$22.00",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnDX4D6IiIGVohTyrLwSawjcJpKcfWtddds-3kzir3K18e1or3fELgFqN7p_tw5S6XwtM&usqp=CAU",
+            "image_url": "https://www.seriouseats.com/thmb/n4xEW8krg00YeVx1MgXNEojCEwE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__05__20160503-spicy-spring-pizza-recipe-37-2be36645b22a4ef3b3545bdb6ab2ad61.jpg",
             "tags": ["Pizza", "Sicilian"]
         }
     ],
@@ -55,7 +55,7 @@
             "title": "Soda",
             "description": "A classic drink that goes well with pizza.",
             "price": "$2.50",
-            "image_url": "https://cdn.mos.cms.futurecdn.net/48yDps3EbdskuitmhQqSq9.jpg",
+            "image_url": "https://images.unsplash.com/photo-1594492634282-12a04144fbfa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1767&q=80",
             "tags": ["Drink", "Soda"]
         },
         {
@@ -63,7 +63,7 @@
             "title": "Beer",
             "description": "A refreshing lager like Peroni Nastro Azzurro is perfect with pizza.",
             "price": "$5.00",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEAr1H6cFil1Z9YOtUSMhK0n52Xvb73kzew&usqp=CAU",
+            "image_url": "https://images.unsplash.com/photo-1516128043650-037fbdbd0b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
             "tags": ["Drink", "Beer"]
         },
         {
@@ -71,7 +71,7 @@
             "title": "Lemonade",
             "description": "A refreshing drink that goes well with pizza.",
             "price": "$3.00",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIlxtFTaRRHfO2jU2BIVKDiYPTU0zP7mdqUwhdZQ30amI8YScf8NCPya6ZFamXh4K8cwk&usqp=CAU",
+            "image_url": "https://images.unsplash.com/photo-1563940486743-66780870ff34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80",
             "tags": ["Drink", "Lemonade"]
         },
         {
@@ -79,7 +79,7 @@
             "title": "Iced Tea",
             "description": "A refreshing drink that goes well with pizza.",
             "price": "$2.50",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd3W8w5jUGTqQzf5X339lQ2ZyzKLByfQXtoJrSvA43Ug_5XCCaRueEirVKmdZGIr2FDsA&usqp=CAU",
+            "image_url": "https://images.unsplash.com/photo-1592099759599-24b131b8e824?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80",
             "tags": ["Drink", "Iced tea"]
         },
         {

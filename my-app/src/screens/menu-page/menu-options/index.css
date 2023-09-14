@@ -16,6 +16,7 @@
 }
 .option img{
     width: 250px;
+    height: 200px;
     border: 3px solid rgb(70, 70, 70);
     border-radius: 3px;
 }

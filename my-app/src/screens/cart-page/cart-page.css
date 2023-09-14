@@ -116,9 +116,15 @@
     padding: 15px 0;
 }
 
+#table-itens{
+    /* height: 240px;
+    overflow-y: scroll;
+    padding-right: -10px; */
+}
+
 #table-itens ul{
     list-style-type: none;
-    margin: 0 0 10px 0;
+    margin: 0 0 0 0;
     padding: 0;
 }
 
@@ -131,7 +137,7 @@
     background-color: rgba(0, 0, 0, 0.03);
 }
 #table-itens li p{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
 }
 
@@ -140,4 +146,32 @@
     padding: 6px 6px 6px 6px;
     margin: 10px 0;
     width: 20vw;
+    border-radius: 10px;
+}
+
+#table-page{
+    margin: 50px auto;
+    width: max-content;
+    background-color: var(--one-color);
+    border-radius: 10px;
+}
+#table-page button{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    font-weight: 800;
+    color: var(--white-color);
+    border-radius: 10px;
+    border-width: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all .4s;
+}
+#table-page button:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#table-page span{
+    margin: 0 15px;
+    font-family: var(--one-font);
+    font-weight: 500;
+    color: var(--white-color);
 }
