@@ -103,9 +103,17 @@ body{
     left: 0;
     top: 0;
 }
+.inside-banner div{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.1));
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0);
+    border-radius: 145px 105px 145px 105px;
+    padding: 30px;
+}
 .inside-banner h1{
     margin: 0 auto;
-    padding-top: 150px;
     color: #FFF;
     font-size: 72px;
     font-family: var(--second-font);
@@ -178,9 +186,5 @@ body{
     
     .banner-landing{
         height: 85vh;
-    }
-
-    .inside-banner h1{
-        padding-top: 300px;
     }
 }

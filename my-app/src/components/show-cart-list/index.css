@@ -58,7 +58,6 @@
 }
 #image-title{
     display: flex;
-    width: max-content;
 }
 
 #button-price{
@@ -162,11 +161,11 @@
 @media (max-width: 470px) {
     #image-title{
         flex-flow: column;
-        width: fit-content;
         text-align: center;
     }
-    #image-title img{
-        margin: auto;
+    
+    #product{
+        margin: auto 0;
     }
 
     #button-price{

@@ -31,19 +31,33 @@ figure{
     margin: 5px auto;
     width: max-content;
 }
-.input-label label input{
+.input-label label input, #logout-button{
     width: 200px;
     height: 30px;
 }
 .input-label .submit-button{
     margin-top: 30px;
 }
-.input-label .submit-button input{
+.input-label .submit-button input, #logout-button{
     width: 105px;
     background-color: red;
     border-radius: 3px;
     border: 1px solid black;
     color: white;
+}
+
+#account-info > h2, h4{
+    
+}
+#account-info h4{
+    text-align: start;
+    font-size: smaller;
+    font-weight: 300;
+}
+#account-info h2{
+    margin-top: -15px;
+    font-weight: 500;
+    color: var(--one-color);
 }
 
 @media(max-width: 800px){

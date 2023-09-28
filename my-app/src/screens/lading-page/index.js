@@ -46,7 +46,9 @@ const LandingPage = () => {
                 <div className='banner-landing'
                     style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/images/main-images/princ-bg.webp"})` }}>
                     <div className='inside-banner'>
-                        <h1>Pizza Project</h1>
+                        <div>
+                            <h1>Slice & Spice</h1>
+                        </div>
                         <img id='start-banner' src={process.env.PUBLIC_URL + "/images/main-images/pizza-banner.png"}
                             alt='pizza banner'>
                         </img>
