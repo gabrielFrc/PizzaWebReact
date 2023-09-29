@@ -35,6 +35,11 @@ figure{
     width: 200px;
     height: 30px;
 }
+
+.input-label .label-checkbox{
+    display: inline;
+}
+
 .input-label .submit-button{
     margin-top: 30px;
 }
