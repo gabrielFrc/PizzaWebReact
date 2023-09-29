@@ -1,11 +1,8 @@
 * DONE | X NOT DONE
 
+X - Senhas e Email já inputado caso esteja marcado como "lembre-me"
 
-X Fazer o redux com localStorage sem gambiarras e manipular a API contando com quantidade de cada
-item mas não necessariamente preciso colocar quantidade no arquivo JSON já que isso faria
-quantidade fazer uma grande gambiarra atraves do JSON, quantidade tem que ser um valor 
-independente.
-
+* Sistema de Log Out no account, Usuario ou email para logar e senha fixa.
 * Only works one time, dont wokrs when resizing width screen !!!!!!!!!!!!!!!! (navigation)
 * passo 2 -> Troca de tela de mobile para desktop buga o navigation
 * passos -> Abrir menu e depois abrir carrinho, fechar e o navigation vai ficar invisivel

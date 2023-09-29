@@ -15,11 +15,16 @@ buttonList.push(new linkButton('/', <p>Stores</p>, null, false))
 buttonList.push(new linkButton('/menu', <p>Menu</p>, null, true))
 
 const CartPage = () => {
-    const products = JSON.parse(localStorage.getItem("myproducts"));
+    let products = JSON.parse(localStorage.getItem("myproducts"));
     let atualTitle = '';
+
+    if(products == null){
+        products = [];
+    }
 
     const limitPerPage = 5;
     const pages = Math.ceil(products.length / limitPerPage);
+
     const [currentPage, setCurrentPage] = useState(1);
     
     const [viewImage, setViewImage] = useState({
@@ -86,7 +91,7 @@ const CartPage = () => {
                         <div id='table-itens'>
                             <ul>
                                 {
-                                products != null && slicing.map((element, i) => {
+                                products.length > 0 && slicing.map((element, i) => {
                                     if(element.title !== atualTitle){
                                         atualTitle = element.title;
                                         return <Fragment key={i}>
