@@ -1,17 +1,22 @@
 .input-field{
-    margin: auto auto 90px auto;
-    height: 30px;
-    position: relative;
+    /* margin: auto auto 90px auto;
+    height: 30px; */
+    position: absolute;
+    z-index: 1;
+    bottom: 5vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 #input-filter{
     height: 25px;
     border: none;
     border-radius: 5px 5px 0 0;
-    padding: 3px 15px;
+    padding: 9px 45px 9px 30px;
     font-family: var(--one-font);
     font-weight: bold;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
     z-index: 2;
+    font-size: large;
 }
 #input-filter:focus{
     outline: none;
@@ -25,11 +30,13 @@
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
-    width: 1rem;
+    width: 1.5rem;
 }
 
 .suggestion{
-    position: relative;
+    position: absolute;
+    right: 0;
+    left: 0;
     z-index: 1;
     border: 1.5px solid black;
     box-shadow: 0px 5px 15px -15px rgba(0, 0, 0, 1);
@@ -40,7 +47,7 @@
     display: block;
     border: none;
     margin: 0;
-    padding: 6px 0;
+    padding: 10px 0;
     width: 100%;
     background-color: white;
     font-family: var(--one-font);
@@ -50,4 +57,11 @@
 }
 .suggestion button:hover{
     background-color: rgb(232, 232, 232);
+}
+
+@media(max-width: 400px){
+    #input-filter{
+        padding: 6px 30px 6px 15px;
+        font-size: normal;
+    }
 }

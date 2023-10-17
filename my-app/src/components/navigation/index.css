@@ -1,5 +1,5 @@
 :root{
-    --header-height: 80px;
+    --header-height: 60px;
 }
 
 header{
@@ -57,6 +57,7 @@ nav{
     /* border: 1px solid rgb(223, 223, 223); */
     transition: transform .3s, color .5s;
     color: white;
+    font-size: .75rem;
 }
 .create-button > button:hover {
     /* background-color: rgb(244, 244, 244); */
@@ -88,6 +89,7 @@ nav{
     height: var(--header-height);
     color: white;
     transition: all .1s;
+    font-size: .75rem;
 }
 .cart-button button:hover{
     background-color: rgba(194, 31, 31, 0);

@@ -9,13 +9,17 @@ const LoginSection = (props) => {
     const checkInput = useRef();
     useEffect(() => {
         if(JSON.parse(localStorage.getItem('account')) != null){
-            if(checkInput.current){
-                checkInput.current.checked = JSON.parse(localStorage.getItem('account')).rememberPass;
-            }
             if(JSON.parse(localStorage.getItem('account')).rememberPass &&
                 JSON.parse(localStorage.getItem('account')).logged != null){
                 setPassword('John123');
                 setEmail('johndoe@email.com');
+            }
+        }
+    }, [])
+    useEffect(() => {
+        if(JSON.parse(localStorage.getItem('account')) != null){
+            if(checkInput.current){
+                checkInput.current.checked = JSON.parse(localStorage.getItem('account')).rememberPass;
             }
         }
     }, [account])
@@ -67,7 +71,9 @@ const LoginSection = (props) => {
                         Remember me
                     </label>
                     <label className='submit-button'>
-                        <input type="submit" value="Log In"/>
+                        <input type="submit" value="Log In" onClick={() => {
+                            window.location.reload(false);
+                        }}/>
                     </label>
                 </form>}
                 {(account != null && account.logged) && <div id='profile-logged'>
@@ -81,6 +87,8 @@ const LoginSection = (props) => {
                         
                         setAccount(null);
                         setAccount(JSON.parse(localStorage.getItem('account')));
+                        props.setLogin(false);
+                        window.location.reload(false);
                     }}>Log out</button>
                 </div>}
             </div>

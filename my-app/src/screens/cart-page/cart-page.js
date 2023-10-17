@@ -55,7 +55,7 @@ const CartPage = () => {
 
     return(
         <>
-            <Navigation button={buttonList} darkMode={true} />
+            <Navigation button={buttonList} darkMode={true}/>
 
             
             { (viewImage.element != null && viewImage.show) && createPortal(myNewImage, viewImage.element) }
@@ -69,7 +69,11 @@ const CartPage = () => {
                                 <h4>Espero que esteja satisfeito!</h4>
                             </div>
                             <div id='buy-button'>
-                                <button>Logue para comprar</button>
+                                {
+                                    (JSON.parse(localStorage.getItem('account')).logged != null && 
+                                    JSON.parse(localStorage.getItem('account')).logged === true) ? <button>Comprar</button> : <button>Logue para comprar</button>
+                                }
+                                
                             </div>
                         </div>
                         <div id='tap-to-view'>

@@ -36,8 +36,14 @@ const Menu = () => {
             <Navigation button={buttonList} darkMode={true} windowHeight={-50} showCategories={true}/>
             <main id='menu-main'>
                 <div className="upper-menu">
-                    <h1 id='menu-title'>Our food</h1>
-                    <FilterInput setFilter={setFilter}/>
+                    {/* <h1 id='menu-title'>Our food</h1> */}
+                    <figure id='display'>
+                        <img src={process.env.PUBLIC_URL + "/images/menu-images/menu-display.png"}
+                            alt='display'>
+                        </img>
+                        <FilterInput setFilter={setFilter}/>
+                    </figure>
+                    
                 </div>
                 <MenuOptions filter={filter}/>
             </main>

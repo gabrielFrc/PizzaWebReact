@@ -19,6 +19,18 @@
     text-shadow: 5px 5px black;
 }
 
+#display{
+    margin: 50px auto;
+    width: 80vw;
+    height: 30vw;
+    position: relative;
+}
+#display > img{
+    width: 105%;
+    transform-origin: center;
+    clip-path: inset(0% 4.5% 39.5% 0%);
+}
+
 .food-category{
     display: flex;
     justify-content: center;
@@ -55,6 +67,11 @@
 @media(max-width: 800px){
     #menu-main{
         padding-top: 150px;
+    }
+
+    #display{
+        width: 95vw;
+        height: 30vw;
     }
 
     .food-container{

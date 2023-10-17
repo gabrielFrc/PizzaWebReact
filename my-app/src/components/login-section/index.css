@@ -8,11 +8,13 @@ body{
     left: 50%;
     top: 15%;
     transform: translate(-50%,-15%);
-    background-color: rgba(255, 255, 255);
+    /* background-color: rgba(255, 255, 255); */
+    background-image: linear-gradient(to bottom, white, rgb(241, 241, 241));
     width: 500px;
     height: 350px;
     padding: 15px 15px;
     border: 1px solid black;
+    border-radius: 5px;
 }
 
 figure{
@@ -63,6 +65,11 @@ figure{
 
 #profile-logged{
     margin-top: 50px;
+}
+#profile-logged img{
+    padding: 20px 10px 0 10px;
+    border: 3px solid black;
+    border-radius: 50%;
 }
 
 #account-info h4{
