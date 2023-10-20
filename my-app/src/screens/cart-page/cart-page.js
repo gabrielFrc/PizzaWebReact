@@ -65,13 +65,13 @@ const CartPage = () => {
                     <div id='products-table'>
                         <div id='table-header'>
                             <div id='table-header-infos'>
-                                <h2>Produtos</h2>
-                                <h4>Espero que esteja satisfeito!</h4>
+                                <h2>Products</h2>
+                                <h4>We hope you're satisfied!</h4>
                             </div>
                             <div id='buy-button'>
                                 {
                                     (JSON.parse(localStorage.getItem('account')).logged != null && 
-                                    JSON.parse(localStorage.getItem('account')).logged === true) ? <button>Comprar</button> : <button>Logue para comprar</button>
+                                    JSON.parse(localStorage.getItem('account')).logged === true) ? <button>Buy</button> : <button>Log in to buy</button>
                                 }
                                 
                             </div>

@@ -11,11 +11,12 @@ class footerLinks{
 }
 
 let footerLinksArray = [];
-footerLinksArray.push(new footerLinks('Sobre a pizza', '#', footerLinksArray.length, false));
-footerLinksArray.push(new footerLinks('Quem somos', '#', footerLinksArray.length, false));
-footerLinksArray.push(new footerLinks('Termos', '#', footerLinksArray.length, false));
+footerLinksArray.push(new footerLinks('About Pizza', '#', footerLinksArray.length, false));
+footerLinksArray.push(new footerLinks('Who We Are', '#', footerLinksArray.length, false));
+footerLinksArray.push(new footerLinks('Terms', '#', footerLinksArray.length, false));
 footerLinksArray.push(new footerLinks('API', '#', footerLinksArray.length, false));
 footerLinksArray.push(new footerLinks('Icons8', 'https://icons8.com', footerLinksArray.length, true));
+
 
 const Footer = () => {
     return(
@@ -53,9 +54,9 @@ const Footer = () => {
                         </img>
                     </div>
                 </div>
-                <p>Serviço disponível nas áreas de entrega ...´s Pizza, todos os dias, de acordo com o horário de funcionamento de cada loja. A/O ...´s Pizza se reserva no direito de alterar ou encerrar as ofertas sem aviso prévio. Todas as promoções expostas não são cumulativas entre si ou com outras promoções e descontos. Cobramos taxa de entrega. Todos os nossos produtos CONTÉM GLÚTEN. Alérgicos: todos os nossos produtos contém ou podem conter traços de Trigo, Ovos, Leite e Soja. As formas de pagamento variam de acordo com cada loja. Imagens meramente ilustrativas. Consulte se sua loja de preferência pratica a promoção escolhida</p>
-                <p>*Preços "a partir de" podem sofrer pequenas variações de acordo com a região da loja. Confirme o preço no carrinho de compras antes de confirmar seu pedido.</p>
-                <p>...´S PIZZA BRASIL, Av. x xx, xxx - Bloco x – xº andar – x, Rio de Janeiro/RJ - xxxxx-xxx</p>
+                <p>Service available in delivery areas... Pizza, every day, according to each store's operating hours. ...'s Pizza reserves the right to change or end the offers without prior notice. All promotions displayed are not cumulative with each other or with other promotions and discounts. We charge a delivery fee. All our products CONTAIN GLUTEN. Allergenic: all our products contain or may contain traces of Wheat, Eggs, Milk, and Soy. Payment methods vary according to each store. Images are for illustration purposes only. Check if your preferred store offers the chosen promotion.</p>
+                <p>*Prices 'from' may vary slightly depending on the store's region. Confirm the price in the shopping cart before confirming your order.</p>
+                <p>...'S PIZZA BRAZIL, Av. x xx, xxx - Block x - xth floor - x, Rio de Janeiro/RJ - xxxxx-xxx</p>
             </div>
         </div>
     )

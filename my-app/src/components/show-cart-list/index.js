@@ -40,6 +40,9 @@ function ShowCartList(props) {
 
     return (
         <>
+            <button onClick={
+                () => RedirectTo('cart')
+            }>Order all</button>
             <div className='cart-div'>
                 <div className='close-menu'>
                     <img src={process.env.PUBLIC_URL + '/images/navigation-images/close-icon.png'} alt='close icon' onClick={() => {
